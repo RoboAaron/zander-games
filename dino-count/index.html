@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Dino count</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" aria-label="Dinosaur counting game">
+      <header class="top">
+        <p class="label">How many dinosaurs? Count the T-rexes and long-necks. Use “Hear hint” for the voice.</p>
+        <div class="dino-stage" id="dino-stage" aria-hidden="true"></div>
+        <p class="question" id="question" aria-live="polite">How many?</p>
+        <button type="button" class="hear-hint" id="hear-hint">Hear hint</button>
+      </header>
+
+      <div class="numpad" id="numpad" role="group" aria-label="Pick a number"></div>
+
+      <p class="cheer" id="cheer" aria-live="polite"></p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
