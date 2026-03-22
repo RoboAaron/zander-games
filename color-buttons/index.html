@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Color Buttons</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" aria-label="Color button game">
+      <header class="top">
+        <p class="label" id="prompt-label">Tap the button that matches the big square. Use “Hear hint” for the voice.</p>
+        <div class="target-swatch" id="target-swatch" aria-hidden="true"></div>
+        <p class="target-name" id="target-name" aria-live="polite"></p>
+        <button type="button" class="say-again" id="say-again">Hear hint</button>
+      </header>
+
+      <div class="buttons" id="buttons" role="group" aria-label="Color choices"></div>
+
+      <p class="cheer" id="cheer" aria-live="polite"></p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
