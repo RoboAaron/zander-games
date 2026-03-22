@@ -67,29 +67,8 @@ body {
   animation: pop-in 0.35s ease backwards;
 }
 
-.dino:nth-child(1) {
-  animation-delay: 0.02s;
-}
-.dino:nth-child(2) {
-  animation-delay: 0.05s;
-}
-.dino:nth-child(3) {
-  animation-delay: 0.08s;
-}
-.dino:nth-child(4) {
-  animation-delay: 0.11s;
-}
-.dino:nth-child(5) {
-  animation-delay: 0.14s;
-}
-.dino:nth-child(6) {
-  animation-delay: 0.17s;
-}
-.dino:nth-child(7) {
-  animation-delay: 0.2s;
-}
-.dino:nth-child(8) {
-  animation-delay: 0.23s;
+.dino-stage.many .dino {
+  font-size: clamp(1.65rem, 7vw, 2.65rem);
 }
 
 @keyframes pop-in {
@@ -127,18 +106,18 @@ body {
 
 .numpad {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(10px, 3vw, 16px);
-  width: min(100%, 400px);
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(6px, 2vw, 12px);
+  width: min(100%, 480px);
 }
 
 .num-btn {
   aspect-ratio: 1;
-  min-height: 72px;
+  min-height: clamp(48px, 11vw, 64px);
   border: none;
-  border-radius: 16px;
+  border-radius: 14px;
   cursor: pointer;
-  font-size: clamp(1.5rem, 7vw, 2rem);
+  font-size: clamp(1.15rem, 4.5vw, 1.65rem);
   font-weight: 800;
   color: var(--text);
   background: linear-gradient(180deg, #3d4554 0%, #2c3340 100%);
@@ -190,7 +169,6 @@ body {
 
 @media (min-width: 480px) {
   .numpad {
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 420px;
+    max-width: 520px;
   }
 }

@@ -1,5 +1,5 @@
 const MIN_COUNT = 1;
-const MAX_COUNT = 8;
+const MAX_COUNT = 20;
 const DINO_EMOJIS = ["🦖", "🦕"];
 
 const WORDS = [
@@ -14,6 +14,16 @@ const WORDS = [
   "eight",
   "nine",
   "ten",
+  "eleven",
+  "twelve",
+  "thirteen",
+  "fourteen",
+  "fifteen",
+  "sixteen",
+  "seventeen",
+  "eighteen",
+  "nineteen",
+  "twenty",
 ];
 
 const stageEl = document.getElementById("dino-stage");
@@ -45,11 +55,13 @@ function speak(text) {
 
 function renderDinos() {
   stageEl.replaceChildren();
+  stageEl.classList.toggle("many", count > 10);
   for (let i = 0; i < count; i += 1) {
     const span = document.createElement("span");
     span.className = "dino";
     span.textContent = pickDinoEmoji();
     span.setAttribute("aria-hidden", "true");
+    span.style.animationDelay = `${i * 0.025}s`;
     stageEl.appendChild(span);
   }
 }
