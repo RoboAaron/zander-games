@@ -2,122 +2,128 @@ const FIELD_SIZE = 3;
 const CATCH_MS = 1000;
 const SPRITE_PAD = 3;
 
-const TCG_TYPES = {
-  grass: { name: "Grass", bg: "#3d9b3d", text: "#fff" },
-  fire: { name: "Fire", bg: "#e85d2a", text: "#fff" },
-  water: { name: "Water", bg: "#3b7dd8", text: "#fff" },
-  lightning: { name: "Lightning", bg: "#f3d23b", text: "#1a1a1a" },
-  psychic: { name: "Psychic", bg: "#b56bc7", text: "#fff" },
-  fighting: { name: "Fighting", bg: "#c45c3a", text: "#fff" },
-  darkness: { name: "Darkness", bg: "#2f2f3a", text: "#fff" },
-  metal: { name: "Metal", bg: "#9aa4b5", text: "#1a1a1a" },
-  dragon: { name: "Dragon", bg: "#7b5ec8", text: "#fff" },
-  colorless: { name: "Colorless", bg: "#c5c0b0", text: "#1a1a1a" },
+const TYPES = {
+  grass: { name: "Grass", bg: "#3d9b3d", text: "#fff", symbol: "grass" },
+  fire: { name: "Fire", bg: "#e85d2a", text: "#fff", symbol: "fire" },
+  water: { name: "Water", bg: "#3b7dd8", text: "#fff", symbol: "water" },
+  electric: { name: "Electric", bg: "#f3d23b", text: "#1a1a1a", symbol: "lightning" },
+  ice: { name: "Ice", bg: "#7ec8d4", text: "#1a1a1a", symbol: "water" },
+  fighting: { name: "Fighting", bg: "#c45c3a", text: "#fff", symbol: "fighting" },
+  ground: { name: "Ground", bg: "#d4a657", text: "#1a1a1a", symbol: "fighting" },
+  rock: { name: "Rock", bg: "#b89b3e", text: "#1a1a1a", symbol: "fighting" },
+  bug: { name: "Bug", bg: "#9aaa28", text: "#1a1a1a", symbol: "grass" },
+  ghost: { name: "Ghost", bg: "#6b4e96", text: "#fff", symbol: "psychic" },
+  psychic: { name: "Psychic", bg: "#b56bc7", text: "#fff", symbol: "psychic" },
+  dark: { name: "Dark", bg: "#2f2f3a", text: "#fff", symbol: "darkness" },
+  steel: { name: "Steel", bg: "#9aa4b5", text: "#1a1a1a", symbol: "metal" },
+  dragon: { name: "Dragon", bg: "#7b5ec8", text: "#fff", symbol: "dragon" },
+  fairy: { name: "Fairy", bg: "#e889b0", text: "#1a1a1a", symbol: "fairy" },
+  normal: { name: "Normal", bg: "#c5c0b0", text: "#1a1a1a", symbol: "colorless" },
 };
 
 const ROSTER = [
-  { id: 1, name: "Bulbasaur", slug: "bulbasaur", tcg: "grass" },
-  { id: 2, name: "Ivysaur", slug: "ivysaur", tcg: "grass" },
-  { id: 3, name: "Venusaur", slug: "venusaur", tcg: "grass" },
-  { id: 4, name: "Charmander", slug: "charmander", tcg: "fire" },
-  { id: 5, name: "Charmeleon", slug: "charmeleon", tcg: "fire" },
-  { id: 6, name: "Charizard", slug: "charizard", tcg: "fire" },
-  { id: 7, name: "Squirtle", slug: "squirtle", tcg: "water" },
-  { id: 8, name: "Wartortle", slug: "wartortle", tcg: "water" },
-  { id: 9, name: "Blastoise", slug: "blastoise", tcg: "water" },
-  { id: 12, name: "Butterfree", slug: "butterfree", tcg: "grass" },
-  { id: 25, name: "Pikachu", slug: "pikachu", tcg: "lightning" },
-  { id: 26, name: "Raichu", slug: "raichu", tcg: "lightning" },
-  { id: 37, name: "Vulpix", slug: "vulpix", tcg: "fire" },
-  { id: 39, name: "Jigglypuff", slug: "jigglypuff", tcg: "colorless" },
-  { id: 52, name: "Meowth", slug: "meowth", tcg: "colorless" },
-  { id: 54, name: "Psyduck", slug: "psyduck", tcg: "water" },
-  { id: 58, name: "Growlithe", slug: "growlithe", tcg: "fire" },
-  { id: 94, name: "Gengar", slug: "gengar", tcg: "psychic" },
-  { id: 95, name: "Onix", slug: "onix", tcg: "fighting" },
-  { id: 104, name: "Cubone", slug: "cubone", tcg: "fighting" },
-  { id: 129, name: "Magikarp", slug: "magikarp", tcg: "water" },
-  { id: 130, name: "Gyarados", slug: "gyarados", tcg: "water" },
-  { id: 131, name: "Lapras", slug: "lapras", tcg: "water" },
-  { id: 133, name: "Eevee", slug: "eevee", tcg: "colorless" },
-  { id: 134, name: "Vaporeon", slug: "vaporeon", tcg: "water" },
-  { id: 135, name: "Jolteon", slug: "jolteon", tcg: "lightning" },
-  { id: 136, name: "Flareon", slug: "flareon", tcg: "fire" },
-  { id: 143, name: "Snorlax", slug: "snorlax", tcg: "colorless" },
-  { id: 144, name: "Articuno", slug: "articuno", tcg: "water" },
-  { id: 145, name: "Zapdos", slug: "zapdos", tcg: "lightning" },
-  { id: 146, name: "Moltres", slug: "moltres", tcg: "fire" },
-  { id: 147, name: "Dratini", slug: "dratini", tcg: "dragon" },
-  { id: 148, name: "Dragonair", slug: "dragonair", tcg: "dragon" },
-  { id: 149, name: "Dragonite", slug: "dragonite", tcg: "dragon" },
-  { id: 150, name: "Mewtwo", slug: "mewtwo", tcg: "psychic" },
-  { id: 151, name: "Mew", slug: "mew", tcg: "psychic" },
-  { id: 172, name: "Pichu", slug: "pichu", tcg: "lightning" },
-  { id: 175, name: "Togepi", slug: "togepi", tcg: "psychic" },
-  { id: 196, name: "Espeon", slug: "espeon", tcg: "psychic" },
-  { id: 197, name: "Umbreon", slug: "umbreon", tcg: "darkness" },
-  { id: 208, name: "Steelix", slug: "steelix", tcg: "metal" },
-  { id: 230, name: "Kingdra", slug: "kingdra", tcg: "dragon" },
-  { id: 252, name: "Treecko", slug: "treecko", tcg: "grass" },
-  { id: 255, name: "Torchic", slug: "torchic", tcg: "fire" },
-  { id: 258, name: "Mudkip", slug: "mudkip", tcg: "water" },
-  { id: 329, name: "Vibrava", slug: "vibrava", tcg: "dragon" },
-  { id: 330, name: "Flygon", slug: "flygon", tcg: "dragon" },
-  { id: 334, name: "Altaria", slug: "altaria", tcg: "dragon" },
-  { id: 359, name: "Absol", slug: "absol", tcg: "darkness" },
-  { id: 371, name: "Bagon", slug: "bagon", tcg: "dragon" },
-  { id: 372, name: "Shelgon", slug: "shelgon", tcg: "dragon" },
-  { id: 373, name: "Salamence", slug: "salamence", tcg: "dragon" },
-  { id: 380, name: "Latias", slug: "latias", tcg: "dragon" },
-  { id: 381, name: "Latios", slug: "latios", tcg: "dragon" },
-  { id: 384, name: "Rayquaza", slug: "rayquaza", tcg: "dragon" },
-  { id: 393, name: "Piplup", slug: "piplup", tcg: "water" },
-  { id: 443, name: "Gible", slug: "gible", tcg: "dragon" },
-  { id: 444, name: "Gabite", slug: "gabite", tcg: "dragon" },
-  { id: 445, name: "Garchomp", slug: "garchomp", tcg: "dragon" },
-  { id: 448, name: "Lucario", slug: "lucario", tcg: "fighting" },
-  { id: 483, name: "Dialga", slug: "dialga", tcg: "dragon" },
-  { id: 484, name: "Palkia", slug: "palkia", tcg: "dragon" },
-  { id: 487, name: "Giratina", slug: "giratina", tcg: "dragon" },
-  { id: 610, name: "Axew", slug: "axew", tcg: "dragon" },
-  { id: 611, name: "Fraxure", slug: "fraxure", tcg: "dragon" },
-  { id: 612, name: "Haxorus", slug: "haxorus", tcg: "dragon" },
-  { id: 621, name: "Druddigon", slug: "druddigon", tcg: "dragon" },
-  { id: 633, name: "Deino", slug: "deino", tcg: "dragon" },
-  { id: 634, name: "Zweilous", slug: "zweilous", tcg: "dragon" },
-  { id: 635, name: "Hydreigon", slug: "hydreigon", tcg: "dragon" },
-  { id: 643, name: "Reshiram", slug: "reshiram", tcg: "dragon" },
-  { id: 644, name: "Zekrom", slug: "zekrom", tcg: "dragon" },
-  { id: 646, name: "Kyurem", slug: "kyurem", tcg: "dragon" },
-  { id: 658, name: "Greninja", slug: "greninja", tcg: "water" },
-  { id: 700, name: "Sylveon", slug: "sylveon", tcg: "psychic" },
-  { id: 704, name: "Goomy", slug: "goomy", tcg: "dragon" },
-  { id: 705, name: "Sliggoo", slug: "sliggoo", tcg: "dragon" },
-  { id: 706, name: "Goodra", slug: "goodra", tcg: "dragon" },
-  { id: 714, name: "Noibat", slug: "noibat", tcg: "dragon" },
-  { id: 715, name: "Noivern", slug: "noivern", tcg: "dragon" },
-  { id: 718, name: "Zygarde", slug: "zygarde", tcg: "dragon" },
-  { id: 776, name: "Turtonator", slug: "turtonator", tcg: "dragon" },
-  { id: 778, name: "Mimikyu", slug: "mimikyu", tcg: "psychic" },
-  { id: 780, name: "Drampa", slug: "drampa", tcg: "dragon" },
-  { id: 782, name: "Jangmo-o", slug: "jangmoo", tcg: "dragon" },
-  { id: 783, name: "Hakamo-o", slug: "hakamoo", tcg: "dragon" },
-  { id: 784, name: "Kommo-o", slug: "kommoo", tcg: "dragon" },
-  { id: 840, name: "Applin", slug: "applin", tcg: "dragon" },
-  { id: 841, name: "Flapple", slug: "flapple", tcg: "dragon" },
-  { id: 842, name: "Appletun", slug: "appletun", tcg: "dragon" },
-  { id: 884, name: "Duraludon", slug: "duraludon", tcg: "dragon" },
-  { id: 885, name: "Dreepy", slug: "dreepy", tcg: "dragon" },
-  { id: 886, name: "Drakloak", slug: "drakloak", tcg: "dragon" },
-  { id: 887, name: "Dragapult", slug: "dragapult", tcg: "dragon" },
-  { id: 895, name: "Regidrago", slug: "regidrago", tcg: "dragon" },
-  { id: 967, name: "Cyclizar", slug: "cyclizar", tcg: "dragon" },
-  { id: 978, name: "Tatsugiri", slug: "tatsugiri", tcg: "dragon" },
-  { id: 996, name: "Frigibax", slug: "frigibax", tcg: "dragon" },
-  { id: 997, name: "Arctibax", slug: "arctibax", tcg: "dragon" },
-  { id: 998, name: "Baxcalibur", slug: "baxcalibur", tcg: "dragon" },
-  { id: 1007, name: "Koraidon", slug: "koraidon", tcg: "dragon" },
-  { id: 1008, name: "Miraidon", slug: "miraidon", tcg: "dragon" },
+  { id: 1, name: "Bulbasaur", slug: "bulbasaur", type: "grass" },
+  { id: 2, name: "Ivysaur", slug: "ivysaur", type: "grass" },
+  { id: 3, name: "Venusaur", slug: "venusaur", type: "grass" },
+  { id: 4, name: "Charmander", slug: "charmander", type: "fire" },
+  { id: 5, name: "Charmeleon", slug: "charmeleon", type: "fire" },
+  { id: 6, name: "Charizard", slug: "charizard", type: "fire" },
+  { id: 7, name: "Squirtle", slug: "squirtle", type: "water" },
+  { id: 8, name: "Wartortle", slug: "wartortle", type: "water" },
+  { id: 9, name: "Blastoise", slug: "blastoise", type: "water" },
+  { id: 12, name: "Butterfree", slug: "butterfree", type: "bug" },
+  { id: 25, name: "Pikachu", slug: "pikachu", type: "electric" },
+  { id: 26, name: "Raichu", slug: "raichu", type: "electric" },
+  { id: 37, name: "Vulpix", slug: "vulpix", type: "fire" },
+  { id: 39, name: "Jigglypuff", slug: "jigglypuff", type: "normal" },
+  { id: 52, name: "Meowth", slug: "meowth", type: "normal" },
+  { id: 54, name: "Psyduck", slug: "psyduck", type: "water" },
+  { id: 58, name: "Growlithe", slug: "growlithe", type: "fire" },
+  { id: 94, name: "Gengar", slug: "gengar", type: "ghost" },
+  { id: 95, name: "Onix", slug: "onix", type: "rock" },
+  { id: 104, name: "Cubone", slug: "cubone", type: "ground" },
+  { id: 129, name: "Magikarp", slug: "magikarp", type: "water" },
+  { id: 130, name: "Gyarados", slug: "gyarados", type: "water" },
+  { id: 131, name: "Lapras", slug: "lapras", type: "water" },
+  { id: 133, name: "Eevee", slug: "eevee", type: "normal" },
+  { id: 134, name: "Vaporeon", slug: "vaporeon", type: "water" },
+  { id: 135, name: "Jolteon", slug: "jolteon", type: "electric" },
+  { id: 136, name: "Flareon", slug: "flareon", type: "fire" },
+  { id: 143, name: "Snorlax", slug: "snorlax", type: "normal" },
+  { id: 144, name: "Articuno", slug: "articuno", type: "ice" },
+  { id: 145, name: "Zapdos", slug: "zapdos", type: "electric" },
+  { id: 146, name: "Moltres", slug: "moltres", type: "fire" },
+  { id: 147, name: "Dratini", slug: "dratini", type: "dragon" },
+  { id: 148, name: "Dragonair", slug: "dragonair", type: "dragon" },
+  { id: 149, name: "Dragonite", slug: "dragonite", type: "dragon" },
+  { id: 150, name: "Mewtwo", slug: "mewtwo", type: "psychic" },
+  { id: 151, name: "Mew", slug: "mew", type: "psychic" },
+  { id: 172, name: "Pichu", slug: "pichu", type: "electric" },
+  { id: 175, name: "Togepi", slug: "togepi", type: "fairy" },
+  { id: 196, name: "Espeon", slug: "espeon", type: "psychic" },
+  { id: 197, name: "Umbreon", slug: "umbreon", type: "dark" },
+  { id: 208, name: "Steelix", slug: "steelix", type: "steel" },
+  { id: 230, name: "Kingdra", slug: "kingdra", type: "dragon" },
+  { id: 252, name: "Treecko", slug: "treecko", type: "grass" },
+  { id: 255, name: "Torchic", slug: "torchic", type: "fire" },
+  { id: 258, name: "Mudkip", slug: "mudkip", type: "water" },
+  { id: 329, name: "Vibrava", slug: "vibrava", type: "dragon" },
+  { id: 330, name: "Flygon", slug: "flygon", type: "dragon" },
+  { id: 334, name: "Altaria", slug: "altaria", type: "dragon" },
+  { id: 359, name: "Absol", slug: "absol", type: "dark" },
+  { id: 371, name: "Bagon", slug: "bagon", type: "dragon" },
+  { id: 372, name: "Shelgon", slug: "shelgon", type: "dragon" },
+  { id: 373, name: "Salamence", slug: "salamence", type: "dragon" },
+  { id: 380, name: "Latias", slug: "latias", type: "dragon" },
+  { id: 381, name: "Latios", slug: "latios", type: "dragon" },
+  { id: 384, name: "Rayquaza", slug: "rayquaza", type: "dragon" },
+  { id: 393, name: "Piplup", slug: "piplup", type: "water" },
+  { id: 443, name: "Gible", slug: "gible", type: "dragon" },
+  { id: 444, name: "Gabite", slug: "gabite", type: "dragon" },
+  { id: 445, name: "Garchomp", slug: "garchomp", type: "dragon" },
+  { id: 448, name: "Lucario", slug: "lucario", type: "fighting" },
+  { id: 483, name: "Dialga", slug: "dialga", type: "dragon" },
+  { id: 484, name: "Palkia", slug: "palkia", type: "dragon" },
+  { id: 487, name: "Giratina", slug: "giratina", type: "dragon" },
+  { id: 610, name: "Axew", slug: "axew", type: "dragon" },
+  { id: 611, name: "Fraxure", slug: "fraxure", type: "dragon" },
+  { id: 612, name: "Haxorus", slug: "haxorus", type: "dragon" },
+  { id: 621, name: "Druddigon", slug: "druddigon", type: "dragon" },
+  { id: 633, name: "Deino", slug: "deino", type: "dragon" },
+  { id: 634, name: "Zweilous", slug: "zweilous", type: "dragon" },
+  { id: 635, name: "Hydreigon", slug: "hydreigon", type: "dragon" },
+  { id: 643, name: "Reshiram", slug: "reshiram", type: "dragon" },
+  { id: 644, name: "Zekrom", slug: "zekrom", type: "dragon" },
+  { id: 646, name: "Kyurem", slug: "kyurem", type: "dragon" },
+  { id: 658, name: "Greninja", slug: "greninja", type: "water" },
+  { id: 700, name: "Sylveon", slug: "sylveon", type: "fairy" },
+  { id: 704, name: "Goomy", slug: "goomy", type: "dragon" },
+  { id: 705, name: "Sliggoo", slug: "sliggoo", type: "dragon" },
+  { id: 706, name: "Goodra", slug: "goodra", type: "dragon" },
+  { id: 714, name: "Noibat", slug: "noibat", type: "dragon" },
+  { id: 715, name: "Noivern", slug: "noivern", type: "dragon" },
+  { id: 718, name: "Zygarde", slug: "zygarde", type: "dragon" },
+  { id: 776, name: "Turtonator", slug: "turtonator", type: "dragon" },
+  { id: 778, name: "Mimikyu", slug: "mimikyu", type: "ghost" },
+  { id: 780, name: "Drampa", slug: "drampa", type: "dragon" },
+  { id: 782, name: "Jangmo-o", slug: "jangmoo", type: "dragon" },
+  { id: 783, name: "Hakamo-o", slug: "hakamoo", type: "dragon" },
+  { id: 784, name: "Kommo-o", slug: "kommoo", type: "dragon" },
+  { id: 840, name: "Applin", slug: "applin", type: "dragon" },
+  { id: 841, name: "Flapple", slug: "flapple", type: "dragon" },
+  { id: 842, name: "Appletun", slug: "appletun", type: "dragon" },
+  { id: 884, name: "Duraludon", slug: "duraludon", type: "dragon" },
+  { id: 885, name: "Dreepy", slug: "dreepy", type: "dragon" },
+  { id: 886, name: "Drakloak", slug: "drakloak", type: "dragon" },
+  { id: 887, name: "Dragapult", slug: "dragapult", type: "dragon" },
+  { id: 895, name: "Regidrago", slug: "regidrago", type: "dragon" },
+  { id: 967, name: "Cyclizar", slug: "cyclizar", type: "dragon" },
+  { id: 978, name: "Tatsugiri", slug: "tatsugiri", type: "dragon" },
+  { id: 996, name: "Frigibax", slug: "frigibax", type: "dragon" },
+  { id: 997, name: "Arctibax", slug: "arctibax", type: "dragon" },
+  { id: 998, name: "Baxcalibur", slug: "baxcalibur", type: "dragon" },
+  { id: 1007, name: "Koraidon", slug: "koraidon", type: "dragon" },
+  { id: 1008, name: "Miraidon", slug: "miraidon", type: "dragon" },
 ];
 
 const fieldEl = document.getElementById("field");
@@ -143,8 +149,8 @@ function cryUrl(slug) {
   return `https://play.pokemonshowdown.com/audio/cries/${slug}.mp3`;
 }
 
-function typeSymbolUrl(tcg) {
-  return `energy/${tcg}.png`;
+function typeSymbolUrl(typeId) {
+  return `energy/${TYPES[typeId].symbol}.png`;
 }
 
 function speak(text) {
@@ -173,15 +179,15 @@ function pickSpawn(excludeIds) {
   return source[randomInt(0, source.length - 1)];
 }
 
-function applyTypeStyle(el, tcg) {
-  const type = TCG_TYPES[tcg];
+function applyTypeStyle(el, typeId) {
+  const type = TYPES[typeId];
   el.style.setProperty("--tile", type.bg);
   el.style.setProperty("--tile-text", type.text);
 }
 
 function fillTypeRow(el, poke) {
-  const type = TCG_TYPES[poke.tcg];
-  el.querySelector(".type-symbol").src = typeSymbolUrl(poke.tcg);
+  const type = TYPES[poke.type];
+  el.querySelector(".type-symbol").src = typeSymbolUrl(poke.type);
   el.querySelector(".type-symbol").alt = "";
   el.querySelector(".type-name").textContent = type.name;
 }
@@ -190,7 +196,7 @@ function fillCard(btn, poke, index) {
   btn.dataset.index = String(index);
   btn.classList.remove("catching");
   btn.setAttribute("aria-label", `Catch ${poke.name}`);
-  applyTypeStyle(btn, poke.tcg);
+  applyTypeStyle(btn, poke.type);
   btn.querySelector(".poke-sprite").src = spriteUrl(poke.id);
   btn.querySelector(".poke-sprite").alt = poke.name;
   btn.querySelector(".poke-name").textContent = poke.name;
@@ -245,7 +251,7 @@ function renderCaught() {
     btn.type = "button";
     btn.className = "caught-card";
     btn.setAttribute("aria-label", `Hear ${poke.name}`);
-    applyTypeStyle(btn, poke.tcg);
+    applyTypeStyle(btn, poke.type);
 
     const img = document.createElement("img");
     img.className = "poke-sprite";
