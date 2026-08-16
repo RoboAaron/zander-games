@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Catch them</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game" aria-label="Pokémon catching game">
+      <header class="top">
+        <p class="label">Tap a Pokémon to catch it. Tap a name in your list to hear it.</p>
+        <p class="cheer" id="cheer" aria-live="polite">Catch them!</p>
+      </header>
+
+      <div class="field" id="field" role="group" aria-label="Pokémon to catch"></div>
+
+      <section class="caught" aria-labelledby="caught-heading">
+        <h2 id="caught-heading">Caught</h2>
+        <ul class="caught-list" id="caught-list"></ul>
+      </section>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
