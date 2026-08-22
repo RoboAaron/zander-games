@@ -282,6 +282,10 @@ function speak(text) {
   window.speechSynthesis.speak(u);
 }
 
+function article(name) {
+  return /^[aeiou]/i.test(name) ? "an" : "a";
+}
+
 function hearShark(shark) {
   if (window.speechSynthesis) window.speechSynthesis.cancel();
   speak(shark.name);
@@ -404,7 +408,7 @@ function onSpot(index) {
   locked = true;
   const btn = slotButtons[index];
   btn.classList.add("spotting");
-  cheerEl.textContent = `You spotted a ${shark.name}!`;
+  cheerEl.textContent = `You spotted ${article(shark.name)} ${shark.name}!`;
   hearShark(shark);
   addToSpotted(shark);
 
