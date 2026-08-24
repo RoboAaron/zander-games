@@ -364,6 +364,9 @@ body.modal-open {
 /* Little round "read it out loud" buttons for pre-readers. */
 .say-btn {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -371,8 +374,6 @@ body.modal-open {
   border-radius: 50%;
   background: var(--accent);
   color: #06263b;
-  font-size: 1.25rem;
-  line-height: 1;
   cursor: pointer;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
 }
@@ -382,10 +383,25 @@ body.modal-open {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 
+.say-btn .speaker-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 .modal-name-say {
   width: 40px;
   height: 40px;
-  font-size: 1.1rem;
+}
+
+.modal-name-say .speaker-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.speaker-icon {
+  width: 22px;
+  height: 22px;
 }
 
 .modal-group {
@@ -398,6 +414,10 @@ body.modal-open {
 }
 
 .modal-hear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
   padding: 12px 16px;
   border: none;
@@ -408,6 +428,11 @@ body.modal-open {
   font-weight: 800;
   cursor: pointer;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.modal-hear .speaker-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .modal-hear:active {
@@ -548,7 +573,7 @@ body.modal-open {
 }
 
 .modal-credit {
-  margin: 10px 0 0;
+  margin: 16px 0 0;
   font-size: 0.78rem;
   color: var(--muted);
 }

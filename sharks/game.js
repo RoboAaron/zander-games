@@ -567,6 +567,14 @@ const SHARKS = [
   },
 ];
 
+// Inline speaker icon so the "read it aloud" buttons look the same on every
+// device (emoji glyphs render inconsistently across systems).
+const SPEAKER_SVG =
+  '<svg class="speaker-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' +
+  '<path fill="currentColor" d="M3 9v6h4l5 4V5L7 9H3z"/>' +
+  '<path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.8 6a9 9 0 0 1 0 12"/>' +
+  "</svg>";
+
 const STAT_ROWS = [
   ["Scientific name", "sci"],
   ["Size", "length"],
@@ -642,7 +650,7 @@ function makeSayButton(label, onSay) {
   btn.type = "button";
   btn.className = "say-btn";
   btn.setAttribute("aria-label", label);
-  btn.textContent = "🔊";
+  btn.innerHTML = SPEAKER_SVG;
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
     onSay();
@@ -794,10 +802,10 @@ function buildModal() {
       <div class="modal-hero"><img class="modal-img" alt="" draggable="false" /></div>
       <div class="modal-title-row">
         <h2 class="modal-name" id="modal-name"></h2>
-        <button class="say-btn modal-name-say" type="button" aria-label="Hear the name">🔊</button>
+        <button class="say-btn modal-name-say" type="button" aria-label="Hear the name">${SPEAKER_SVG}</button>
       </div>
       <p class="modal-group"><span class="group-dot" aria-hidden="true"></span><span class="group-name"></span></p>
-      <button class="modal-hear" type="button">🔊 Hear everything</button>
+      <button class="modal-hear" type="button">${SPEAKER_SVG}<span>Hear everything</span></button>
       <div class="modal-section">
         <h3>All about this shark</h3>
         <div class="stat-grid"></div>
