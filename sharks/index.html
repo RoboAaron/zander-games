@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Shark spotter</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <main class="game" aria-label="Shark spotting game">
@@ -12,15 +12,21 @@
         <p class="label">Tap a shark to spot it. Tap a shark in your logbook to open its info card.</p>
         <p class="cheer" id="cheer" aria-live="polite">Go spot some sharks!</p>
         <p class="progress" id="progress" aria-live="polite"></p>
+        <div class="controls">
+          <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true"></button>
+        </div>
       </header>
 
       <div class="field" id="field" role="group" aria-label="Sharks to spot"></div>
 
       <section class="logbook" aria-labelledby="logbook-heading">
-        <h2 id="logbook-heading">My shark logbook</h2>
+        <div class="logbook-head">
+          <h2 id="logbook-heading">My shark logbook</h2>
+          <button class="reset-btn" id="reset-btn" type="button">Start over</button>
+        </div>
         <ul class="caught-list" id="caught-list"></ul>
       </section>
     </main>
-    <script src="game.js"></script>
+    <script src="game.js?v=2"></script>
   </body>
 </html>
