@@ -7,6 +7,11 @@ const OPEN_LICENSES = new Set([
 ]);
 const GALLERY_MAX = 5;
 
+// The logbook and sound preference are saved on the device so a returning
+// child finds their own collection of spotted sharks again.
+const STORE_KEY = "shark-spotter-collection-v1";
+const SOUND_KEY = "shark-spotter-sound";
+
 // Real shark families, grouped into kid-friendly names with a badge color.
 const GROUPS = {
   mackerel: { name: "Mackerel shark", color: "#3b82c4" },
@@ -21,6 +26,8 @@ const GROUPS = {
   frilled: { name: "Frilled shark", color: "#9b6a8a" },
   cowshark: { name: "Cow shark", color: "#5c8a86" },
   catshark: { name: "Cat shark", color: "#b5793b" },
+  lantern: { name: "Lantern shark", color: "#4bb39a" },
+  megatooth: { name: "Megatooth shark", color: "#b0562f" },
 };
 
 // Every shark is a real species. `art` is the bundled illustration, `inat` is the
@@ -747,6 +754,186 @@ const SHARKS = [
       diet: "Octopus, small fish, and crabs",
     },
   },
+  {
+    slug: "megalodon", name: "Megalodon", sci: "Otodus megalodon",
+    group: "megatooth", inat: 1493507,
+    facts: [
+      "Megalodon was the biggest shark that ever lived — as long as a school bus!",
+      "Just one of its teeth was bigger than your whole hand.",
+      "It lived long, long ago and is now extinct.",
+      "All that is left of it today are its giant fossil teeth.",
+    ],
+    info: {
+      length: "Up to ~15-18 m (50-60 ft)",
+      weight: "Maybe over 50,000 kg (100,000 lb)",
+      speed: "A powerful, heavy swimmer",
+      lifespan: "Extinct for about 3.5 million years",
+      range: "Warm oceans all around the ancient world",
+      diet: "Big prey like whales and giant fish",
+    },
+  },
+  {
+    slug: "winghead", name: "Winghead Shark", sci: "Eusphyra blochii",
+    group: "hammerhead", inat: 48066,
+    facts: [
+      "The winghead shark has the widest head of any hammerhead.",
+      "Its head can be almost half as wide as its whole body is long!",
+      "Its eyes sit way out on the tips of its wing-shaped head.",
+      "The extra-wide head helps it sniff out hidden food.",
+    ],
+    info: {
+      length: "Up to ~1.9 m (6 ft)",
+      weight: "Up to ~10 kg (22 lb)",
+      speed: "Nimble",
+      lifespan: "~20-25 years",
+      range: "Warm shallow coasts of the Indian and Pacific Oceans",
+      diet: "Small fish, shrimp, and squid",
+    },
+  },
+  {
+    slug: "tasselled-wobbegong", name: "Tasselled Wobbegong", sci: "Eucrossorhinus dasypogon",
+    group: "carpet", inat: 63637,
+    facts: [
+      "It wears a beard of frilly skin tassels all around its mouth.",
+      "Its maze-like pattern makes it disappear against the reef.",
+      "It lies very still, then gulps down fish that swim too close.",
+      "It can even wiggle its tail like a wormy lure to trick prey closer.",
+    ],
+    info: {
+      length: "Up to ~1.8 m (6 ft)",
+      weight: "Up to ~12 kg (26 lb)",
+      speed: "Very slow — a hidden ambush hunter",
+      lifespan: "~20-30 years",
+      range: "Coral reefs around Australia and New Guinea",
+      diet: "Fish, crabs, and octopus",
+    },
+  },
+  {
+    slug: "grey-reef", name: "Grey Reef Shark", sci: "Carcharhinus amblyrhynchos",
+    group: "requiem", inat: 67970,
+    facts: [
+      "It is one of the most common sharks on coral reefs.",
+      "When it feels grumpy it arches its back and does a warning dance.",
+      "It has a wide black band along the back edge of its tail.",
+      "Lots of them can gather together over the reef by day.",
+    ],
+    info: {
+      length: "Up to ~2.1 m (7 ft)",
+      weight: "Up to ~34 kg (75 lb)",
+      speed: "Fast and agile",
+      lifespan: "~25 years",
+      range: "Coral reefs of the Indian and Pacific Oceans",
+      diet: "Reef fish, squid, and octopus",
+    },
+  },
+  {
+    slug: "velvet-lanternshark", name: "Velvet Belly Lanternshark", sci: "Etmopterus spinax",
+    group: "lantern", inat: 100597,
+    facts: [
+      "This little shark glows in the dark, deep sea!",
+      "Its belly makes a soft blue-green light called bioluminescence.",
+      "The glow hides its shadow from animals looking up from below.",
+      "It even has glowing spines to warn others to stay away.",
+    ],
+    info: {
+      length: "Up to ~45 cm (18 in)",
+      weight: "Less than 1 kg (2 lb)",
+      speed: "Slow",
+      lifespan: "~8 years or more",
+      range: "Deep Atlantic and Mediterranean waters",
+      diet: "Small fish, shrimp, and squid",
+    },
+  },
+  {
+    slug: "dwarf-lanternshark", name: "Dwarf Lanternshark", sci: "Etmopterus perryi",
+    group: "lantern", inat: 100588,
+    facts: [
+      "This is the smallest shark in the whole world!",
+      "It is small enough to hold in your hand.",
+      "Its belly glows with a gentle light in the deep dark sea.",
+      "It lives so deep that people almost never see it.",
+    ],
+    info: {
+      length: "Only ~20 cm (8 in) — the tiniest shark",
+      weight: "Just a few grams — super tiny!",
+      speed: "Slow",
+      lifespan: "Not well known",
+      range: "Deep sea off Colombia and Venezuela",
+      diet: "Tiny shrimp and other small creatures",
+    },
+  },
+  {
+    slug: "shyshark", name: "Puffadder Shyshark", sci: "Haploblepharus edwardsii",
+    group: "catshark", inat: 102101,
+    facts: [
+      "When it is scared it curls into a ring and hides its eyes with its tail.",
+      "That is why it is called a 'shy' shark!",
+      "It is small and covered in pretty orange saddles and white spots.",
+      "It lays its eggs in little cases called mermaid's purses.",
+    ],
+    info: {
+      length: "Up to ~60 cm (24 in)",
+      weight: "About 1 kg (2 lb)",
+      speed: "Slow",
+      lifespan: "Not well known",
+      range: "Rocky reefs around South Africa",
+      diet: "Small crabs, shrimp, and worms",
+    },
+  },
+  {
+    slug: "zebra-bullhead", name: "Zebra Bullhead Shark", sci: "Heterodontus zebra",
+    group: "bullhead", inat: 102717,
+    facts: [
+      "It is covered in bold dark stripes, just like a zebra.",
+      "It has a short, blunt, piggy face with bony ridges over its eyes.",
+      "It has a sharp spine in front of each back fin to keep it safe.",
+      "It uses flat back teeth to crush shellfish and sea urchins.",
+    ],
+    info: {
+      length: "Up to ~1.25 m (4 ft)",
+      weight: "A few kilograms",
+      speed: "Slow",
+      lifespan: "~20-30 years",
+      range: "Reefs of the western Pacific Ocean",
+      diet: "Shellfish, sea urchins, and crabs",
+    },
+  },
+  {
+    slug: "roughshark", name: "Angular Roughshark", sci: "Oxynotus centrina",
+    group: "dogfish", inat: 108112,
+    facts: [
+      "This funny shark has a fat, triangle-shaped body like a little pig.",
+      "It even has piggy nostrils and can make a grunting sound!",
+      "Its skin is so rough it feels like sandpaper.",
+      "It has two tall, sail-like fins on its back, each with a spine.",
+    ],
+    info: {
+      length: "Up to ~1 m (3.3 ft)",
+      weight: "A few kilograms",
+      speed: "Slow",
+      lifespan: "Not well known",
+      range: "Deep sea floors of the eastern Atlantic and Mediterranean",
+      diet: "Worms, crabs, and other small sea-floor animals",
+    },
+  },
+  {
+    slug: "bigeye-thresher", name: "Bigeye Thresher", sci: "Alopias superciliosus",
+    group: "mackerel", inat: 93695,
+    facts: [
+      "It has enormous eyes to see in the dark, deep ocean.",
+      "Its eyes point upward to spot food swimming above it.",
+      "Its long, whip-like tail is almost as long as its body.",
+      "It swings that tail to slap and stun the fish it hunts.",
+    ],
+    info: {
+      length: "Up to ~4.9 m (16 ft) — about half is tail",
+      weight: "Up to ~360 kg (795 lb)",
+      speed: "A strong swimmer",
+      lifespan: "~20 years or more",
+      range: "Deep open oceans worldwide",
+      diet: "Fish and squid",
+    },
+  },
 ];
 
 // Inline speaker icon so the "read it aloud" buttons look the same on every
@@ -771,11 +958,51 @@ const fieldEl = document.getElementById("field");
 const cheerEl = document.getElementById("cheer");
 const progressEl = document.getElementById("progress");
 const caughtListEl = document.getElementById("caught-list");
+const soundBtn = document.getElementById("sound-toggle");
+const resetBtn = document.getElementById("reset-btn");
 
 const field = [];
 const spotted = [];
 const slotButtons = [];
 let locked = false;
+
+let soundOn = loadSound();
+
+/* ---------- Saving progress on the device ---------- */
+
+function loadSpotted() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    const slugs = raw ? JSON.parse(raw) : [];
+    return Array.isArray(slugs) ? slugs : [];
+  } catch (err) {
+    return [];
+  }
+}
+
+function saveSpotted() {
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify(spotted.map((s) => s.slug)));
+  } catch (err) {
+    /* storage may be unavailable (e.g. private mode) — the game still works */
+  }
+}
+
+function loadSound() {
+  try {
+    return localStorage.getItem(SOUND_KEY) !== "off";
+  } catch (err) {
+    return true;
+  }
+}
+
+function saveSound() {
+  try {
+    localStorage.setItem(SOUND_KEY, soundOn ? "on" : "off");
+  } catch (err) {
+    /* ignore */
+  }
+}
 
 function randomInt(min, max) {
   return min + Math.floor(Math.random() * (max - min + 1));
@@ -792,11 +1019,93 @@ function cancelSpeech() {
 }
 
 function speak(text) {
-  if (!window.speechSynthesis || !text) return;
+  if (!soundOn || !window.speechSynthesis || !text) return;
   const u = new SpeechSynthesisUtterance(text);
   u.rate = 0.95;
   u.pitch = 1.0;
   window.speechSynthesis.speak(u);
+}
+
+/* ---------- Happy sounds (Web Audio) ---------- */
+
+let audioCtx = null;
+
+function getAudioCtx() {
+  if (audioCtx) return audioCtx;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return null;
+  audioCtx = new AC();
+  return audioCtx;
+}
+
+function playTone(freq, start, dur, gain, type) {
+  const ctx = getAudioCtx();
+  if (!ctx) return;
+  const osc = ctx.createOscillator();
+  const g = ctx.createGain();
+  osc.type = type || "sine";
+  osc.frequency.value = freq;
+  const t0 = ctx.currentTime + start;
+  g.gain.setValueAtTime(0.0001, t0);
+  g.gain.exponentialRampToValueAtTime(gain, t0 + 0.02);
+  g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  osc.connect(g);
+  g.connect(ctx.destination);
+  osc.start(t0);
+  osc.stop(t0 + dur + 0.03);
+}
+
+// A short, friendly chime. "new" and "complete" are extra celebratory.
+function playChime(kind) {
+  if (!soundOn) return;
+  const ctx = getAudioCtx();
+  if (!ctx) return;
+  if (ctx.state === "suspended") ctx.resume();
+  if (kind === "complete") {
+    [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => playTone(f, i * 0.14, 0.5, 0.18, "triangle"));
+  } else if (kind === "new") {
+    [659.25, 830.61, 987.77].forEach((f, i) => playTone(f, i * 0.1, 0.35, 0.16, "triangle"));
+  } else {
+    [587.33, 880].forEach((f, i) => playTone(f, i * 0.09, 0.26, 0.13, "sine"));
+  }
+}
+
+/* ---------- Confetti / bubble burst ---------- */
+
+const BURST_COLORS = ["#58e0d6", "#ffd166", "#ff8fab", "#8ecae6", "#c8f76b", "#ffffff"];
+
+function burstAt(x, y, big) {
+  const layer = document.createElement("div");
+  layer.className = "burst";
+  layer.style.left = `${x}px`;
+  layer.style.top = `${y}px`;
+  const n = big ? 22 : 12;
+  for (let i = 0; i < n; i += 1) {
+    const dot = document.createElement("span");
+    dot.className = "burst-dot";
+    const angle = (Math.PI * 2 * i) / n + Math.random() * 0.6;
+    const dist = (big ? 90 : 60) + Math.random() * (big ? 80 : 40);
+    dot.style.setProperty("--dx", `${Math.cos(angle) * dist}px`);
+    dot.style.setProperty("--dy", `${Math.sin(angle) * dist - 20}px`);
+    dot.style.background = BURST_COLORS[i % BURST_COLORS.length];
+    dot.style.animationDelay = `${Math.random() * 0.05}s`;
+    layer.appendChild(dot);
+  }
+  document.body.appendChild(layer);
+  window.setTimeout(() => layer.remove(), 1100);
+}
+
+// Big party when the whole collection is complete.
+function celebrateAll() {
+  cheerEl.textContent = "WOW! You found ALL the sharks! You are a shark expert!";
+  playChime("complete");
+  cancelSpeech();
+  speak("Wow! You found all the sharks! You are a shark expert!");
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  for (let i = 0; i < 5; i += 1) {
+    window.setTimeout(() => burstAt(Math.random() * w, h * 0.1 + Math.random() * h * 0.5, true), i * 180);
+  }
 }
 
 // Say a single phrase on its own (used by the little speaker buttons).
@@ -819,12 +1128,6 @@ function speakAll(shark) {
 
 function article(name) {
   return /^[aeiou]/i.test(name) ? "an" : "a";
-}
-
-function hearShark(shark) {
-  cancelSpeech();
-  speak(shark.name);
-  speak(shark.facts[0]);
 }
 
 function makeSayButton(label, onSay) {
@@ -944,6 +1247,7 @@ function renderSpotted() {
 function addToSpotted(shark) {
   if (spotted.some((s) => s.slug === shark.slug)) return;
   spotted.push(shark);
+  saveSpotted();
   renderSpotted();
   updateProgress();
 }
@@ -956,9 +1260,25 @@ function onSpot(index) {
   locked = true;
   const btn = slotButtons[index];
   btn.classList.add("spotting");
-  cheerEl.textContent = `You spotted ${article(shark.name)} ${shark.name}!`;
-  hearShark(shark);
+
+  const isNew = !spotted.some((s) => s.slug === shark.slug);
+  const completes = isNew && spotted.length + 1 === SHARKS.length;
+  const rect = btn.getBoundingClientRect();
+  burstAt(rect.left + rect.width / 2, rect.top + rect.height / 2, isNew);
+
   addToSpotted(shark);
+
+  if (completes) {
+    celebrateAll();
+  } else {
+    cheerEl.textContent = isNew
+      ? `New! You found ${article(shark.name)} ${shark.name}!`
+      : `You spotted ${article(shark.name)} ${shark.name}!`;
+    playChime(isNew ? "new" : "spot");
+    cancelSpeech();
+    speak(shark.name);
+    speak(shark.facts[0]);
+  }
 
   window.setTimeout(() => {
     field[index] = pickSpawn(field.map((s) => s.slug));
@@ -1211,7 +1531,46 @@ function closeInfo() {
   if (lastFocused && lastFocused.focus) lastFocused.focus();
 }
 
+function renderSound() {
+  soundBtn.setAttribute("aria-pressed", String(soundOn));
+  soundBtn.classList.toggle("is-off", !soundOn);
+  soundBtn.innerHTML = `${SPEAKER_SVG}<span class="sound-label">${soundOn ? "Sound on" : "Sound off"}</span>`;
+}
+
+function initControls() {
+  renderSound();
+  soundBtn.addEventListener("click", () => {
+    soundOn = !soundOn;
+    saveSound();
+    if (soundOn) {
+      playChime("spot");
+    } else {
+      cancelSpeech();
+    }
+    renderSound();
+  });
+
+  resetBtn.addEventListener("click", () => {
+    if (!spotted.length) return;
+    if (!window.confirm("Start over and clear your shark logbook?")) return;
+    spotted.length = 0;
+    saveSpotted();
+    renderSpotted();
+    updateProgress();
+    cheerEl.textContent = "Logbook cleared — go spot some sharks!";
+  });
+}
+
+function restoreSpotted() {
+  const bySlug = new Map(SHARKS.map((s) => [s.slug, s]));
+  loadSpotted().forEach((slug) => {
+    const shark = bySlug.get(slug);
+    if (shark && !spotted.includes(shark)) spotted.push(shark);
+  });
+}
+
 function start() {
+  restoreSpotted();
   const exclude = [];
   for (let i = 0; i < FIELD_SIZE; i += 1) {
     const shark = pickSpawn(exclude);
@@ -1221,6 +1580,7 @@ function start() {
     slotButtons.push(btn);
     fieldEl.appendChild(btn);
   }
+  initControls();
   renderSpotted();
   updateProgress();
 }
