@@ -46,6 +46,50 @@ body {
   line-height: 1.4;
 }
 
+#how-to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.progress {
+  margin: 6px 0 0;
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.caught-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 10px;
+}
+
+.caught-head h2 {
+  margin: 0;
+}
+
+.reset-btn {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reset-btn:active {
+  transform: scale(0.98);
+}
+
 .cheer {
   min-height: 1.4em;
   margin: 0;
@@ -287,5 +331,18 @@ body {
 @media (max-width: 360px) {
   .caught-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poke-card,
+  .poke-sprite,
+  .poke-name,
+  .type-row {
+    transition: none;
+  }
+  .poke-sprite,
+  .poke-card.catching .ball {
+    animation: none;
   }
 }

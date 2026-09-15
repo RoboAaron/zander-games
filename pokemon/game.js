@@ -1,6 +1,8 @@
 const FIELD_SIZE = 3;
 const CATCH_MS = 1000;
 const SPRITE_PAD = 3;
+const CAUGHT_KEY = "pokemon-caught-v1";
+const HOW_TO_TEXT = "Tap a Pokémon to catch it. Tap a name in your list to hear it.";
 
 const TYPES = {
   grass: { name: "Grass", bg: "#3d9b3d", text: "#fff", symbol: "grass" },
@@ -129,7 +131,13 @@ const ROSTER = [
 const fieldEl = document.getElementById("field");
 const cheerEl = document.getElementById("cheer");
 const caughtListEl = document.getElementById("caught-list");
+const progressEl = document.getElementById("progress");
+const resetBtn = document.getElementById("reset-btn");
 const cryPlayer = new Audio();
+
+function soundOn() {
+  return !window.Kids || window.Kids.sound.enabled;
+}
 
 const field = [];
 const caught = [];
@@ -154,7 +162,7 @@ function typeSymbolUrl(typeId) {
 }
 
 function speak(text) {
-  if (!window.speechSynthesis) return;
+  if (!soundOn() || !window.speechSynthesis) return;
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.rate = 0.9;
@@ -163,6 +171,7 @@ function speak(text) {
 }
 
 function playOfficialCry(slug) {
+  if (!soundOn()) return;
   cryPlayer.pause();
   cryPlayer.src = cryUrl(slug);
   cryPlayer.play().catch(() => {});
@@ -272,10 +281,32 @@ function renderCaught() {
   });
 }
 
+function saveCaught() {
+  if (window.Kids) window.Kids.store.set(CAUGHT_KEY, caught.map((p) => p.id));
+}
+
+function updateProgress() {
+  if (!progressEl) return;
+  progressEl.textContent = `Caught ${caught.length} of ${ROSTER.length}`;
+}
+
 function addToCaught(poke) {
   if (caught.some((p) => p.id === poke.id)) return;
   caught.push(poke);
+  saveCaught();
   renderCaught();
+  updateProgress();
+}
+
+function restoreCaught() {
+  if (!window.Kids) return;
+  const ids = window.Kids.store.get(CAUGHT_KEY, []);
+  if (!Array.isArray(ids)) return;
+  const byId = new Map(ROSTER.map((p) => [p.id, p]));
+  ids.forEach((id) => {
+    const poke = byId.get(id);
+    if (poke && !caught.some((p) => p.id === poke.id)) caught.push(poke);
+  });
 }
 
 function onCatch(index) {
@@ -297,7 +328,38 @@ function onCatch(index) {
   }, CATCH_MS);
 }
 
+function initReadToMe() {
+  if (!window.Kids) return;
+  const bar = document.getElementById("kids-topbar");
+  if (bar) {
+    bar.appendChild(window.Kids.homeButton("../"));
+    const spacer = document.createElement("span");
+    spacer.className = "kids-topbar-spacer";
+    bar.appendChild(spacer);
+    bar.appendChild(window.Kids.muteButton());
+  }
+  const label = document.getElementById("how-to");
+  if (label) label.appendChild(window.Kids.hearButton(HOW_TO_TEXT, { ariaLabel: "Hear how to play" }));
+  window.Kids.speakInstructionOnce(HOW_TO_TEXT);
+}
+
+function initReset() {
+  if (!resetBtn) return;
+  resetBtn.addEventListener("click", () => {
+    if (!caught.length) return;
+    if (!window.confirm("Start over and let all your Pokémon go?")) return;
+    caught.length = 0;
+    saveCaught();
+    renderCaught();
+    updateProgress();
+    cheerEl.textContent = "All set — catch them again!";
+  });
+}
+
 function start() {
+  initReadToMe();
+  initReset();
+  restoreCaught();
   const exclude = [];
   for (let i = 0; i < FIELD_SIZE; i += 1) {
     const poke = pickSpawn(exclude);
@@ -308,6 +370,7 @@ function start() {
     fieldEl.appendChild(btn);
   }
   renderCaught();
+  updateProgress();
 }
 
 start();

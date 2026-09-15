@@ -4,21 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Dino count</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../shared/kids.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <main class="game" aria-label="Dinosaur counting game">
+      <div class="kids-topbar" id="kids-topbar"></div>
       <header class="top">
-        <p class="label">How many dinosaurs? Count the T-rexes and long-necks. Use “Hear hint” for the voice.</p>
+        <p class="label" id="how-to">
+          <span class="how-to-text">How many dinosaurs? Count them and tap the number.</span>
+        </p>
         <div class="dino-stage" id="dino-stage" aria-hidden="true"></div>
         <p class="question" id="question" aria-live="polite">How many?</p>
         <button type="button" class="hear-hint" id="hear-hint">Hear hint</button>
+        <p class="stars" id="stars" aria-live="polite"></p>
       </header>
 
       <div class="numpad" id="numpad" role="group" aria-label="Pick a number"></div>
 
       <p class="cheer" id="cheer" aria-live="polite"></p>
     </main>
-    <script src="game.js"></script>
+    <script src="../shared/kids.js?v=1"></script>
+    <script src="game.js?v=2"></script>
   </body>
 </html>
