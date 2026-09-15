@@ -1,0 +1,108 @@
+/* Shared kid-friendly UI: big tap targets, Home / Mute / read-aloud buttons. */
+/* Uses each game's CSS variables where present, with safe fallbacks. */
+
+.kids-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(100%, 640px);
+  margin: 0 auto;
+}
+
+.kids-topbar-spacer {
+  flex: 1;
+}
+
+.kids-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.kids-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.kids-btn:focus-visible {
+  outline: 3px solid #ffe98a;
+  outline-offset: 3px;
+}
+
+.kids-icon {
+  width: 24px;
+  height: 24px;
+  flex: none;
+}
+
+/* Home button */
+.kids-home {
+  background: var(--panel, #252a33);
+  color: var(--text, #f2f4f8);
+}
+
+/* Mute / sound toggle */
+.kids-mute {
+  background: var(--accent, #7ee787);
+  color: #06263b;
+}
+
+.kids-mute.is-off {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--muted, #9aa3b2);
+}
+
+/* The wave arcs only make sense when sound is on; the slash only when off. */
+.kids-icon-slash {
+  display: none;
+}
+
+.kids-mute.is-off .kids-icon-wave {
+  display: none;
+}
+
+.kids-mute.is-off .kids-icon-slash {
+  display: inline;
+}
+
+/* Read-this-out-loud button (round speaker) */
+.kids-hear {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--accent, #7ee787);
+  color: #06263b;
+}
+
+.kids-hear.has-label {
+  width: auto;
+  border-radius: 999px;
+  padding: 10px 18px;
+}
+
+.kids-btn-label {
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kids-btn {
+    transition: none;
+  }
+  .kids-btn:active {
+    transform: none;
+  }
+}

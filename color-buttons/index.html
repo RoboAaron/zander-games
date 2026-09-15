@@ -4,21 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Color Buttons</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../shared/kids.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
     <main class="game" aria-label="Color button game">
+      <div class="kids-topbar" id="kids-topbar"></div>
       <header class="top">
-        <p class="label" id="prompt-label">Tap the button that matches the big square. Use “Hear hint” for the voice.</p>
+        <p class="label" id="prompt-label">
+          <span class="how-to-text">Tap the button that matches the big square.</span>
+        </p>
         <div class="target-swatch" id="target-swatch" aria-hidden="true"></div>
         <p class="target-name" id="target-name" aria-live="polite"></p>
         <button type="button" class="say-again" id="say-again">Hear hint</button>
+        <p class="stars" id="stars" aria-live="polite"></p>
       </header>
 
       <div class="buttons" id="buttons" role="group" aria-label="Color choices"></div>
 
       <p class="cheer" id="cheer" aria-live="polite"></p>
     </main>
-    <script src="game.js"></script>
+    <script src="../shared/kids.js?v=1"></script>
+    <script src="game.js?v=2"></script>
   </body>
 </html>

@@ -10,7 +10,8 @@ const GALLERY_MAX = 5;
 // The logbook and sound preference are saved on the device so a returning
 // child finds their own collection of spotted sharks again.
 const STORE_KEY = "shark-spotter-collection-v1";
-const SOUND_KEY = "shark-spotter-sound";
+// Shared across the hub + all games so muting anywhere mutes everywhere.
+const SOUND_KEY = "zander-sound";
 
 // Real shark families, grouped into kid-friendly names with a badge color.
 const GROUPS = {
@@ -1537,7 +1538,23 @@ function renderSound() {
   soundBtn.innerHTML = `${SPEAKER_SVG}<span class="sound-label">${soundOn ? "Sound on" : "Sound off"}</span>`;
 }
 
+const HOW_TO_TEXT = "Tap a shark to spot it. Tap a shark in your logbook to open its info card.";
+
+function initReadToMe() {
+  if (!window.Kids) return;
+  const bar = document.getElementById("kids-topbar");
+  if (bar) bar.appendChild(window.Kids.homeButton("../"));
+
+  const label = document.getElementById("how-to");
+  if (label) {
+    const ear = window.Kids.hearButton(HOW_TO_TEXT, { ariaLabel: "Hear how to play" });
+    label.appendChild(ear);
+  }
+  window.Kids.speakInstructionOnce(HOW_TO_TEXT);
+}
+
 function initControls() {
+  initReadToMe();
   renderSound();
   soundBtn.addEventListener("click", () => {
     soundOn = !soundOn;

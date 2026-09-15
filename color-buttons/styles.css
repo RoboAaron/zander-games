@@ -42,6 +42,22 @@ body {
   color: var(--muted);
 }
 
+#prompt-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stars {
+  margin: 12px 0 0;
+  min-height: 1.4em;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 800;
+  color: #ffd76a;
+}
+
 .target-swatch {
   width: min(40vw, 180px);
   height: min(40vw, 180px);
@@ -151,5 +167,16 @@ body {
 @media (min-width: 600px) {
   .buttons {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .target-swatch,
+  .color-btn {
+    transition: none;
+  }
+  .target-swatch.pop,
+  .color-btn.wrong {
+    animation: none;
   }
 }

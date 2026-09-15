@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Shark spotter</title>
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="../shared/kids.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
     <main class="game" aria-label="Shark spotting game">
+      <div class="kids-topbar" id="kids-topbar"></div>
       <header class="top">
-        <p class="label">Tap a shark to spot it. Tap a shark in your logbook to open its info card.</p>
+        <p class="label" id="how-to">
+          <span class="how-to-text">Tap a shark to spot it. Tap a shark in your logbook to open its info card.</span>
+        </p>
         <p class="cheer" id="cheer" aria-live="polite">Go spot some sharks!</p>
         <p class="progress" id="progress" aria-live="polite"></p>
         <div class="controls">
@@ -27,6 +31,7 @@
         <ul class="caught-list" id="caught-list"></ul>
       </section>
     </main>
-    <script src="game.js?v=2"></script>
+    <script src="../shared/kids.js?v=1"></script>
+    <script src="game.js?v=3"></script>
   </body>
 </html>
