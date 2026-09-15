@@ -40,6 +40,81 @@
   };
 
   var listeners = [];
+  var speakTimer = null;
+  var unlocked = false;
+
+  // Chrome often drops speak() when it runs in the same turn as cancel(),
+  // and can leave speechSynthesis stuck in a paused state. These helpers
+  // work around both bugs so kid speech is reliable.
+  var CANCEL_SPEAK_GAP_MS = 70;
+
+  function synth() {
+    return window.speechSynthesis || null;
+  }
+
+  function clearSpeakTimer() {
+    if (speakTimer != null) {
+      clearTimeout(speakTimer);
+      speakTimer = null;
+    }
+  }
+
+  function resumeIfNeeded() {
+    var s = synth();
+    if (!s) return;
+    try {
+      if (s.paused) s.resume();
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function unlockSpeech() {
+    if (unlocked) return;
+    unlocked = true;
+    var s = synth();
+    if (!s) return;
+    try {
+      // Warm the voice list; Chrome loads voices asynchronously.
+      s.getVoices();
+      resumeIfNeeded();
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function makeUtterance(text, opts) {
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = (opts && opts.rate) || 0.92;
+    u.pitch = (opts && opts.pitch) || 1.05;
+    return u;
+  }
+
+  function speakNow(text, opts) {
+    var s = synth();
+    if (!s || !KidSound.enabled || !text) return;
+    resumeIfNeeded();
+    try {
+      s.speak(makeUtterance(text, opts));
+    } catch (e) {
+      /* speech not available */
+    }
+  }
+
+  function speakListNow(texts, opts) {
+    var s = synth();
+    if (!s || !KidSound.enabled) return;
+    resumeIfNeeded();
+    for (var i = 0; i < texts.length; i += 1) {
+      if (texts[i]) {
+        try {
+          s.speak(makeUtterance(texts[i], opts));
+        } catch (e) {
+          /* ignore */
+        }
+      }
+    }
+  }
 
   var KidSound = {
     get enabled() {
@@ -71,27 +146,74 @@
     onChange: function (fn) {
       listeners.push(fn);
     },
+    // Speak text, interrupting anything currently playing.
+    // Never call cancel()+speak() in the same turn — Chrome silently drops it.
     speak: function (text, opts) {
-      if (!this.enabled || !text || !window.speechSynthesis) return;
+      if (!this.enabled || !text || !synth()) return;
+      unlockSpeech();
       opts = opts || {};
+      var s = synth();
+      clearSpeakTimer();
       try {
-        window.speechSynthesis.cancel();
-        var u = new SpeechSynthesisUtterance(text);
-        u.rate = opts.rate || 0.92;
-        u.pitch = opts.pitch || 1.05;
-        window.speechSynthesis.speak(u);
+        if (s.speaking || s.pending) {
+          s.cancel();
+          speakTimer = setTimeout(function () {
+            speakTimer = null;
+            speakNow(text, opts);
+          }, CANCEL_SPEAK_GAP_MS);
+        } else {
+          speakNow(text, opts);
+        }
       } catch (e) {
         /* speech not available */
       }
     },
-    cancel: function () {
+    // Queue several phrases in order (used by info cards).
+    speakQueue: function (texts, opts) {
+      if (!this.enabled || !synth()) return;
+      unlockSpeech();
+      opts = opts || {};
+      var list = (texts || []).filter(Boolean);
+      if (!list.length) return;
+      var s = synth();
+      clearSpeakTimer();
       try {
-        if (window.speechSynthesis) window.speechSynthesis.cancel();
+        if (s.speaking || s.pending) {
+          s.cancel();
+          speakTimer = setTimeout(function () {
+            speakTimer = null;
+            speakListNow(list, opts);
+          }, CANCEL_SPEAK_GAP_MS);
+        } else {
+          speakListNow(list, opts);
+        }
       } catch (e) {
         /* ignore */
       }
     },
+    cancel: function () {
+      clearSpeakTimer();
+      try {
+        var s = synth();
+        if (s) s.cancel();
+      } catch (e) {
+        /* ignore */
+      }
+    },
+    unlock: unlockSpeech,
   };
+
+  // Keep Chrome from getting stuck paused mid-sentence.
+  if (typeof window !== "undefined") {
+    setInterval(resumeIfNeeded, 8000);
+    document.addEventListener(
+      "pointerdown",
+      function () {
+        unlockSpeech();
+      },
+      true
+    );
+  }
 
   function muteButton() {
     var btn = document.createElement("button");
@@ -140,13 +262,19 @@
 
   // Speak a one-line instruction once, after the very first user gesture
   // (browsers block speech before a gesture).
+  // Deferred slightly so a same-tap game sound (spot a creature, etc.) wins;
+  // if something is already talking we skip — the hear button still works.
   function speakInstructionOnce(text) {
     var done = false;
     function go() {
       if (done) return;
       done = true;
       remove();
-      KidSound.speak(text);
+      setTimeout(function () {
+        var s = synth();
+        if (s && (s.speaking || s.pending)) return;
+        KidSound.speak(text);
+      }, 450);
     }
     function remove() {
       document.removeEventListener("pointerdown", go, true);

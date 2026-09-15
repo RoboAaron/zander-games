@@ -1013,18 +1013,36 @@ function artUrl(shark) {
   return `art/${shark.slug}.webp`;
 }
 
-/* ---------- Speech ---------- */
+/* ---------- Speech (via shared Kids helper — avoids Chrome cancel/speak bugs) ---------- */
 
 function cancelSpeech() {
-  if (window.speechSynthesis) window.speechSynthesis.cancel();
+  if (window.Kids) window.Kids.sound.cancel();
+  else if (window.speechSynthesis) window.speechSynthesis.cancel();
 }
 
 function speak(text) {
-  if (!soundOn || !window.speechSynthesis || !text) return;
+  if (!soundOn || !text) return;
+  if (window.Kids) {
+    window.Kids.sound.speak(text, { rate: 0.95, pitch: 1.0 });
+    return;
+  }
+  if (!window.speechSynthesis) return;
   const u = new SpeechSynthesisUtterance(text);
   u.rate = 0.95;
   u.pitch = 1.0;
   window.speechSynthesis.speak(u);
+}
+
+function speakQueue(texts) {
+  if (!soundOn) return;
+  const list = (texts || []).filter(Boolean);
+  if (!list.length) return;
+  if (window.Kids) {
+    window.Kids.sound.speakQueue(list, { rate: 0.95, pitch: 1.0 });
+    return;
+  }
+  cancelSpeech();
+  list.forEach((t) => speak(t));
 }
 
 /* ---------- Happy sounds (Web Audio) ---------- */
@@ -1100,7 +1118,6 @@ function burstAt(x, y, big) {
 function celebrateAll() {
   cheerEl.textContent = "WOW! You found ALL the sharks! You are a shark expert!";
   playChime("complete");
-  cancelSpeech();
   speak("Wow! You found all the sharks! You are a shark expert!");
   const w = window.innerWidth;
   const h = window.innerHeight;
@@ -1111,20 +1128,18 @@ function celebrateAll() {
 
 // Say a single phrase on its own (used by the little speaker buttons).
 function speakField(text) {
-  cancelSpeech();
   speak(text);
 }
 
 // Read the whole info card out loud, one piece at a time.
 function speakAll(shark) {
-  cancelSpeech();
-  speak(shark.name);
-  speak(`This is a ${GROUPS[shark.group].name}.`);
+  const lines = [shark.name, `This is a ${GROUPS[shark.group].name}.`];
   STAT_ROWS.forEach(([label, key]) => {
     const value = key === "sci" ? shark.sci : shark.info[key];
-    if (value) speak(`${label}. ${value}.`);
+    if (value) lines.push(`${label}. ${value}.`);
   });
-  shark.facts.forEach((f) => speak(f));
+  shark.facts.forEach((f) => lines.push(f));
+  speakQueue(lines);
 }
 
 function article(name) {
@@ -1276,9 +1291,7 @@ function onSpot(index) {
       ? `New! You found ${article(shark.name)} ${shark.name}!`
       : `You spotted ${article(shark.name)} ${shark.name}!`;
     playChime(isNew ? "new" : "spot");
-    cancelSpeech();
-    speak(shark.name);
-    speak(shark.facts[0]);
+    speakQueue([shark.name, shark.facts[0]]);
   }
 
   window.setTimeout(() => {
@@ -1555,10 +1568,18 @@ function initReadToMe() {
 
 function initControls() {
   initReadToMe();
+  if (window.Kids) {
+    soundOn = window.Kids.sound.enabled;
+    window.Kids.sound.onChange((on) => {
+      soundOn = on;
+      renderSound();
+    });
+  }
   renderSound();
   soundBtn.addEventListener("click", () => {
     soundOn = !soundOn;
-    saveSound();
+    if (window.Kids) window.Kids.sound.set(soundOn);
+    else saveSound();
     if (soundOn) {
       playChime("spot");
     } else {
