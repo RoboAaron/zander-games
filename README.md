@@ -9,6 +9,7 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 ## Games
 
 - **[🦈 Shark spotter](sharks/)** — tap real shark species to spot them; open an info card with facts and real photos for each one in your logbook.
+- **[🌊 Sea life spotter](marine/)** — tap real marine creatures (eels, shrimp, crabs, lobsters, and more) to spot them; open an info card with facts and real photos for each one in your logbook.
 - **[👾 Catch them](pokemon/)** — tap Pokémon to catch them; your collection is saved and you can hear each name.
 - **[🎨 Color buttons](color-buttons/)** — match the big color square; earns stars as you go.
 - **[🦖 Dino count](dino-count/)** — count the T-rex and long-neck dinos, tap the number (1–20); earns stars.
@@ -16,7 +17,7 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 ## For grown-ups
 
 - **Read-to-me everywhere:** a one-line "how to play" is spoken after the first tap, and every game has a speaker button to hear it again.
-- **Saved progress:** the shark logbook and caught Pokémon persist; Color buttons and Dino count keep a running star count.
+- **Saved progress:** the shark and sea life logbooks and caught Pokémon persist; Color buttons and Dino count keep a running star count.
 - **One sound switch:** muting in any game (key `zander-sound`) mutes them all.
 - **Healthy by design:** no timers, no ads, no sign-up, no urgency; big tap targets and reduced-motion support.
 

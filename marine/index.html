@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Sea life spotter</title>
+    <link rel="stylesheet" href="../shared/kids.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <main class="game" aria-label="Sea life spotting game">
+      <div class="kids-topbar" id="kids-topbar"></div>
+      <header class="top">
+        <p class="label" id="how-to">
+          <span class="how-to-text">Tap a sea creature to spot it. Tap one in your logbook to open its info card.</span>
+        </p>
+        <p class="cheer" id="cheer" aria-live="polite">Go spot some sea life!</p>
+        <p class="progress" id="progress" aria-live="polite"></p>
+        <div class="controls">
+          <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="true"></button>
+        </div>
+      </header>
+
+      <div class="field" id="field" role="group" aria-label="Sea creatures to spot"></div>
+
+      <section class="logbook" aria-labelledby="logbook-heading">
+        <div class="logbook-head">
+          <h2 id="logbook-heading">My sea life logbook</h2>
+          <button class="reset-btn" id="reset-btn" type="button">Start over</button>
+        </div>
+        <ul class="caught-list" id="caught-list"></ul>
+      </section>
+    </main>
+    <script src="../shared/kids.js?v=1"></script>
+    <script src="game.js?v=1"></script>
+  </body>
+</html>
