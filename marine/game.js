@@ -1215,7 +1215,7 @@ function renderSpotted() {
     empty.className = "caught-empty";
     empty.textContent = "No sea creatures yet — tap one above!";
     caughtListEl.appendChild(empty);
-  1000|    return;
+    return;
   }
 
   spotted.forEach((creature) => {
