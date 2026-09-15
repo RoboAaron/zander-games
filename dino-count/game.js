@@ -54,12 +54,17 @@ function pickDinoEmoji() {
 }
 
 function speak(text) {
-  if (!soundOn() || !window.speechSynthesis) return;
+  if (!soundOn() || !text) return;
+  if (window.Kids) {
+    window.Kids.sound.speak(text, { rate: 0.9, pitch: 1.05 });
+    return;
+  }
+  if (!window.speechSynthesis) return;
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.rate = 0.9;
   u.pitch = 1.05;
-  window.speechSynthesis.speak(u);
+  window.setTimeout(() => window.speechSynthesis.speak(u), 70);
 }
 
 function renderStars() {
