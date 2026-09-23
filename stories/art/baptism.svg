@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Baptism</title>
+  <rect width="320" height="240" fill="#c5e8f8"/>
+  <line x1="80.0" y1="44.0" x2="92.0" y2="44.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="76.8" y1="56.0" x2="87.2" y2="62.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="68.0" y1="64.8" x2="74.0" y2="75.2" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="56.0" y1="68.0" x2="56.0" y2="80.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="44.0" y1="64.8" x2="38.0" y2="75.2" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="35.2" y1="56.0" x2="24.8" y2="62.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="32.0" y1="44.0" x2="20.0" y2="44.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="35.2" y1="32.0" x2="24.8" y2="26.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="44.0" y1="23.2" x2="38.0" y2="12.8" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="56.0" y1="20.0" x2="56.0" y2="8.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="68.0" y1="23.2" x2="74.0" y2="12.8" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="76.8" y1="32.0" x2="87.2" y2="26.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><circle cx="56" cy="44" r="20" fill="#ffd56a" stroke="#243044" stroke-width="4"/>
+     <path d="M0 120 Q40 104 80 120 T160 120 T240 120 T320 120 V240 H0 Z" fill="#3aa0d8"/>
+    <path d="M0 138 Q40 126 80 138 T160 138 T240 138 T320 138" fill="none" stroke="#1d6fa5" stroke-width="4"/>
+     <path d="M152.4 100.8 L148.8 168 L164.4 168 L165.6 105.12 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M183.6 100.8 L187.2 168 L171.6 168 L170.4 105.12 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="147.6" y="86.76" width="40.800000000000004" height="48" rx="12" fill="#f7f3ea" stroke="#243044" stroke-width="4"/>
+    <circle cx="168" cy="79.2" r="21.599999999999998" fill="#e0aa78" stroke="#243044" stroke-width="4"/>
+    <circle cx="161.52" cy="77.904" r="2.1" fill="#243044"/>
+    <circle cx="174.48" cy="77.904" r="2.1" fill="#243044"/>
+    <path d="M162.38400000000001 85.248 Q168 90.432 173.61599999999999 85.248" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M120 150 L150 120" stroke="#f0c9a0" stroke-width="8" stroke-linecap="round"/>
+     <path d="M66.3 99.60000000000001 L63.6 150 L75.3 150 L76.2 102.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M89.7 99.60000000000001 L92.4 150 L80.7 150 L79.8 102.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="62.7" y="89.07000000000001" width="30.6" height="36" rx="9" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="78" cy="83.4" r="16.2" fill="#c68642" stroke="#243044" stroke-width="4"/>
+    <circle cx="73.14" cy="82.42800000000001" r="2.1" fill="#243044"/>
+    <circle cx="82.86" cy="82.42800000000001" r="2.1" fill="#243044"/>
+    <path d="M73.788 87.936 Q78 91.82400000000001 82.212 87.936" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

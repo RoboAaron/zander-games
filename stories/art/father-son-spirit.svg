@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Father, Son, and Spirit</title>
+  <rect width="320" height="240" fill="#241848"/>
+  <circle cx="128" cy="128" r="58" fill="#f6c445" fill-opacity="0.92" stroke="#243044" stroke-width="5"/>
+     <circle cx="192" cy="128" r="58" fill="#f7f7ff" fill-opacity="0.92" stroke="#243044" stroke-width="5"/>
+     <circle cx="160" cy="86" r="58" fill="#79c7f2" fill-opacity="0.92" stroke="#243044" stroke-width="5"/>
+     <circle cx="160" cy="116" r="16" fill="#fff8dd" stroke="#243044" stroke-width="4"/>
+</svg>

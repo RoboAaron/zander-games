@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Heaven and hell</title>
+  <rect width="320" height="240" fill="#d9ecff"/>
+  <rect x="0" y="176" width="320" height="64" fill="#8dca86"/>
+     <polygon points="120,102.2 55.400000000000006,146.4 184.6,146.4" fill="#f6c445" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="72.4" y="146.4" width="95.2" height="68" rx="3" fill="#fff8ea" stroke="#243044" stroke-width="4"/>
+     <rect x="105" y="144" width="30" height="42" rx="2" fill="#ffe08a" stroke="#243044" stroke-width="3"/>
+      <path d="M135 144 L153 135 L153 180 L135 186 Z" fill="#f7f3ea" stroke="#243044" stroke-width="3"/>
+     <path d="M40 200 Q120 180 180 200" fill="none" stroke="#ffe08a" stroke-width="10" stroke-linecap="round"/>
+     <ellipse cx="268" cy="198" rx="42" ry="16" fill="#9aa6b5"/>
+     <rect x="252" y="146" width="32" height="50" rx="4" fill="#3c4658" stroke="#243044" stroke-width="4"/>
+     <circle cx="274" cy="172" r="3" fill="#d9dee8"/>
+</svg>

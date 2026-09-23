@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Wind and waves</title>
+  <rect width="320" height="240" fill="#b9d7ea"/>
+  <rect width="160" height="240" fill="#6ea0bf"/>
+     <path d="M0 150 Q40 134 80 150 T160 150 T240 150 T320 150 V240 H0 Z" fill="#2c6f99"/>
+    <path d="M0 168 Q40 156 80 168 T160 168 T240 168 T320 168" fill="none" stroke="#1a4e70" stroke-width="4"/>
+     <rect x="160" width="160" height="240" fill="#d5f0c8"/>
+     <path d="M160 170 Q200 158 240 170 T320 170 V240 H160 Z" fill="#7ec8ea"/>
+     <path d="M173.84 150 Q230 178.8 286.15999999999997 150 L271.76 148.56 Q230 167.28 188.24 148.56 Z" fill="#b8743a" stroke="#243044" stroke-width="4"/>
+    <rect x="227.12" y="108.24000000000001" width="5.76" height="40.32" rx="2" fill="#6e4324" stroke="#243044" stroke-width="3"/>
+    <polygon points="232.88,111.12 267.44,138.48 232.88,138.48" fill="#f7f3ea" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+     <circle cx="214" cy="89.45" r="18.450000000000003" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M214 90.8675 C 193 116.05000000000001, 197.2 144, 200 146 L 228 146 C 230.8 144, 235 116.05000000000001, 214 90.8675 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M211.9 98.9 L217.5 142" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><circle cx="214" cy="89.45" r="9.450000000000001" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M205.55 91.45 Q214 70 222.45 91.45 Q214 88.0325 205.55 91.45 Z" fill="#3a2a22"/><path d="M208.8025 91.8125 Q214 101.2625 219.1975 91.8125 Q214 93.7025 208.8025 91.8125 Z" fill="#3a2a22"/><circle cx="211.165" cy="87.88300000000001" r="2.1" fill="#243044"/>
+    <circle cx="216.835" cy="87.88300000000001" r="2.1" fill="#243044"/>
+    <path d="M211.543 91.096 Q214 93.364 216.457 91.096" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <polygon points="55.6,190 39.4,179.2 39.4,200.8" fill="#f2b85a" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="70" cy="190" rx="19.8" ry="11.700000000000001" fill="#f2b85a" stroke="#243044" stroke-width="4"/>
+    <circle cx="79" cy="188.2" r="2.25" fill="#243044"/>
+</svg>

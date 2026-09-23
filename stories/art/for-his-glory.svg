@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>For his glory</title>
+  <rect width="320" height="240" fill="#1c2c64"/>
+  <path d="M48 30 L51.36 38.64 L60 42 L51.36 45.36 L48 54 L44.64 45.36 L36 42 L44.64 38.64 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M270 26 L272.8 33.2 L280 36 L272.8 38.8 L270 46 L267.2 38.8 L260 36 L267.2 33.2 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M250 70 L252.24 75.76 L258 78 L252.24 80.24 L250 86 L247.76 80.24 L242 78 L247.76 75.76 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <circle cx="160" cy="128" r="48" fill="#3aa0d8" stroke="#243044" stroke-width="4"/>
+     <path d="M120 120 Q150 100 168 128 Q150 150 130 140 Q140 128 120 120 Z" fill="#7bc67e"/>
+     <path d="M168 110 Q200 120 190 148 Q170 140 168 110 Z" fill="#d7a15a"/>
+     <line x1="182.0" y1="128.0" x2="194.0" y2="128.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="179.1" y1="139.0" x2="189.4" y2="145.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="171.0" y1="147.1" x2="177.0" y2="157.4" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="160.0" y1="150.0" x2="160.0" y2="162.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="149.0" y1="147.1" x2="143.0" y2="157.4" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="140.9" y1="139.0" x2="130.6" y2="145.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="138.0" y1="128.0" x2="126.0" y2="128.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="140.9" y1="117.0" x2="130.6" y2="111.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="149.0" y1="108.9" x2="143.0" y2="98.6" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="160.0" y1="106.0" x2="160.0" y2="94.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="171.0" y1="108.9" x2="177.0" y2="98.6" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><line x1="179.1" y1="117.0" x2="189.4" y2="111.0" stroke="#fff3b0" stroke-width="5" stroke-linecap="round"/><circle cx="160" cy="128" r="18" fill="#ffd56a" stroke="#243044" stroke-width="4"/>
+     <path d="M160 36 L168 58 L160 52 L152 58 Z" fill="#ffe08a"/>
+     <path d="M250 150 L232 140 L238 154 Z" fill="#ffe08a"/>
+     <path d="M70 150 L88 140 L82 154 Z" fill="#ffe08a"/>
+</svg>

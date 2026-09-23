@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus will come back</title>
+  <rect width="320" height="240" fill="#9ec9ef"/>
+  <ellipse cx="70" cy="70" rx="40" ry="18" fill="#fff" stroke="#243044" stroke-width="3"/>
+     <ellipse cx="230" cy="60" rx="50" ry="20" fill="#fff" stroke="#243044" stroke-width="3"/>
+     <ellipse cx="160" cy="90" rx="70" ry="24" fill="#fff" stroke="#243044" stroke-width="4"/>
+     <circle cx="160" cy="67.5" r="22.5" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M160 69.525 C 130 105.5, 136 148, 140 150 L 180 150 C 184 148, 190 105.5, 160 69.525 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M157 81 L165 146" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><path d="M152 85.05 L118 95.85" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <path d="M168 85.05 L202 95.85" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="118" cy="95.85" r="6" fill="#f0c9a0" stroke="#243044" stroke-width="3"/>
+      <circle cx="202" cy="95.85" r="6" fill="#f0c9a0" stroke="#243044" stroke-width="3"/><circle cx="160" cy="67.5" r="13.5" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M147.5 69.5 Q160 44 172.5 69.5 Q160 65.475 147.5 69.5 Z" fill="#3a2a22"/><path d="M152.575 70.875 Q160 84.375 167.425 70.875 Q160 73.575 152.575 70.875 Z" fill="#3a2a22"/><circle cx="155.95" cy="65.69" r="2.1" fill="#243044"/>
+    <circle cx="164.05" cy="65.69" r="2.1" fill="#243044"/>
+    <path d="M156.49 70.28 Q160 73.52 163.51 70.28" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M120 78 L160 20 L200 78" fill="#ffe08a" stroke="#243044" stroke-width="3"/>
+     <rect x="0" y="200" width="320" height="40" fill="#7fbf78"/>
+     <circle cx="160" cy="214" r="16" fill="#3aa0d8" stroke="#243044" stroke-width="3"/>
+</svg>

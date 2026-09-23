@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus’ church</title>
+  <rect width="320" height="240" fill="#fff1d8"/>
+  <rect x="0" y="176" width="320" height="64" fill="#8dca86"/>
+     <polygon points="160,105.8 110.6,139.6 209.4,139.6" fill="#e07a5f" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="123.6" y="139.6" width="72.8" height="52" rx="3" fill="#f7f3ea" stroke="#243044" stroke-width="4"/>
+     <path d="M60.64 165.68 L58.480000000000004 206 L67.84 206 L68.56 168.272 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M79.36 165.68 L81.52 206 L72.16 206 L71.44 168.272 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="57.76" y="157.256" width="24.48" height="28.8" rx="7.2" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="70" cy="152.72" r="12.959999999999999" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="66.112" cy="151.9424" r="2.1" fill="#243044"/>
+    <circle cx="73.888" cy="151.9424" r="2.1" fill="#243044"/>
+    <path d="M66.6304 156.3488 Q70 159.4592 73.3696 156.3488" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M109.68 172.16 L107.76 208 L116.08 208 L116.72 174.464 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M126.32 172.16 L128.24 208 L119.92 208 L119.28 174.464 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="107.12" y="164.672" width="21.76" height="25.6" rx="6.4" fill="#ef6f91" stroke="#243044" stroke-width="4"/>
+    <circle cx="118" cy="160.64" r="11.52" fill="#8d5523" stroke="#243044" stroke-width="4"/>
+    <circle cx="114.544" cy="159.94879999999998" r="2.1" fill="#243044"/>
+    <circle cx="121.456" cy="159.94879999999998" r="2.1" fill="#243044"/>
+    <path d="M115.0048 163.86559999999997 Q118 166.63039999999998 120.9952 163.86559999999997" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M197.68 172.16 L195.76 208 L204.08 208 L204.72 174.464 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M214.32 172.16 L216.24 208 L207.92 208 L207.28 174.464 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="195.12" y="164.672" width="21.76" height="25.6" rx="6.4" fill="#7bc67e" stroke="#243044" stroke-width="4"/>
+    <circle cx="206" cy="160.64" r="11.52" fill="#c68642" stroke="#243044" stroke-width="4"/>
+    <circle cx="202.544" cy="159.94879999999998" r="2.1" fill="#243044"/>
+    <circle cx="209.456" cy="159.94879999999998" r="2.1" fill="#243044"/>
+    <path d="M203.0048 163.86559999999997 Q206 166.63039999999998 208.9952 163.86559999999997" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M242.64 165.68 L240.48 206 L249.84 206 L250.56 168.272 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M261.36 165.68 L263.52 206 L254.16 206 L253.44 168.272 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="239.76" y="157.256" width="24.48" height="28.8" rx="7.2" fill="#f6a04d" stroke="#243044" stroke-width="4"/>
+    <circle cx="252" cy="152.72" r="12.959999999999999" fill="#e0aa78" stroke="#243044" stroke-width="4"/>
+    <circle cx="248.112" cy="151.9424" r="2.1" fill="#243044"/>
+    <circle cx="255.888" cy="151.9424" r="2.1" fill="#243044"/>
+    <path d="M248.6304 156.3488 Q252 159.4592 255.3696 156.3488" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <ellipse cx="160" cy="196" rx="16" ry="8" fill="#f2d16b" stroke="#243044" stroke-width="3"/>
+</svg>

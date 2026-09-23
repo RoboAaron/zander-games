@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Love God and people</title>
+  <rect width="320" height="240" fill="#ffe8ef"/>
+  <line x1="182.0" y1="42.0" x2="194.0" y2="42.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="179.1" y1="53.0" x2="189.4" y2="59.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="171.0" y1="61.1" x2="177.0" y2="71.4" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="160.0" y1="64.0" x2="160.0" y2="76.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="149.0" y1="61.1" x2="143.0" y2="71.4" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="140.9" y1="53.0" x2="130.6" y2="59.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="138.0" y1="42.0" x2="126.0" y2="42.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="140.9" y1="31.0" x2="130.6" y2="25.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="149.0" y1="22.9" x2="143.0" y2="12.6" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="160.0" y1="20.0" x2="160.0" y2="8.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="171.0" y1="22.9" x2="177.0" y2="12.6" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="179.1" y1="31.0" x2="189.4" y2="25.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><circle cx="160" cy="42" r="18" fill="#ffd56a" stroke="#243044" stroke-width="4"/>
+     <path d="M160 148.8 C 105.6 113.6, 124.8 75.19999999999999, 160 100.8 C 195.2 75.19999999999999, 214.4 113.6, 160 148.8 Z" fill="#e85d75" stroke="#243044" stroke-width="4"/>
+     <path d="M58.3 159.6 L55.6 210 L67.3 210 L68.2 162.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M81.7 159.6 L84.4 210 L72.7 210 L71.8 162.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="54.7" y="149.07" width="30.6" height="36" rx="9" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="70" cy="143.4" r="16.2" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="65.14" cy="142.428" r="2.1" fill="#243044"/>
+    <circle cx="74.86" cy="142.428" r="2.1" fill="#243044"/>
+    <path d="M65.788 147.936 Q70 151.824 74.212 147.936" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M238.3 159.6 L235.6 210 L247.3 210 L248.2 162.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M261.7 159.6 L264.4 210 L252.7 210 L251.8 162.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="234.7" y="149.07" width="30.6" height="36" rx="9" fill="#ef6f91" stroke="#243044" stroke-width="4"/>
+    <circle cx="250" cy="143.4" r="16.2" fill="#8d5523" stroke="#243044" stroke-width="4"/>
+    <circle cx="245.14" cy="142.428" r="2.1" fill="#243044"/>
+    <circle cx="254.86" cy="142.428" r="2.1" fill="#243044"/>
+    <path d="M245.788 147.936 Q250 151.824 254.212 147.936" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

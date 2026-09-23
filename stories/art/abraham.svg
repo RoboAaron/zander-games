@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Abraham</title>
+  <rect width="320" height="240" fill="#1c2754"/>
+  <path d="M40 28 L42.24 33.76 L48 36 L42.24 38.24 L40 44 L37.76 38.24 L32 36 L37.76 33.76 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M80 64 L81.68 68.32 L86 70 L81.68 71.68 L80 76 L78.32 71.68 L74 70 L78.32 68.32 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M120 33 L121.96 38.04 L127 40 L121.96 41.96 L120 47 L118.04 41.96 L113 40 L118.04 38.04 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M200 21 L202.52 27.48 L209 30 L202.52 32.52 L200 39 L197.48 32.52 L191 30 L197.48 27.48 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M250 54 L251.68 58.32 L256 60 L251.68 61.68 L250 66 L248.32 61.68 L244 60 L248.32 58.32 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M290 28 L292.24 33.76 L298 36 L292.24 38.24 L290 44 L287.76 38.24 L282 36 L287.76 33.76 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M160 59 L161.4 62.6 L165 64 L161.4 65.4 L160 69 L158.6 65.4 L155 64 L158.6 62.6 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <rect x="0" y="176" width="320" height="64" fill="#c9a36a"/>
+     <polygon points="70,176 110,130 150,176" fill="#f4e2b5" stroke="#243044" stroke-width="4"/>
+     <rect x="92" y="150" width="16" height="26" fill="#6e4324"/>
+     <path d="M185.6 151.20000000000002 L183.2 196 L193.6 196 L194.4 154.08 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M206.4 151.20000000000002 L208.8 196 L198.4 196 L197.6 154.08 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="182.4" y="141.84" width="27.200000000000003" height="32" rx="8" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="196" cy="136.8" r="14.399999999999999" fill="#c68642" stroke="#243044" stroke-width="4"/>
+    <circle cx="191.68" cy="135.936" r="2.1" fill="#243044"/>
+    <circle cx="200.32" cy="135.936" r="2.1" fill="#243044"/>
+    <path d="M192.256 140.83200000000002 Q196 144.288 199.744 140.83200000000002" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M227.16 159.92000000000002 L225.12 198 L233.96 198 L234.64 162.368 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M244.84 159.92000000000002 L246.88 198 L238.04 198 L237.36 162.368 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="224.44" y="151.964" width="23.12" height="27.200000000000003" rx="6.800000000000001" fill="#ef6f91" stroke="#243044" stroke-width="4"/>
+    <circle cx="236" cy="147.68" r="12.24" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="232.328" cy="146.9456" r="2.1" fill="#243044"/>
+    <circle cx="239.672" cy="146.9456" r="2.1" fill="#243044"/>
+    <path d="M232.8176 151.1072 Q236 154.0448 239.1824 151.1072" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M71 195 Q85 181 103.2 192.2" fill="#d7a15a" stroke="#243044" stroke-width="4"/>
+    <path d="M103.2 192.2 Q111.6 168.4 120 171.2" fill="none" stroke="#d7a15a" stroke-width="8.399999999999999" stroke-linecap="round"/>
+    <circle cx="122.8" cy="169.8" r="5.6" fill="#e0b06a" stroke="#243044" stroke-width="3"/>
+    <circle cx="124.19999999999999" cy="168.4" r="1.8" fill="#243044"/>
+    <rect x="76.6" y="193.6" width="5" height="11.2" fill="#c48b45" stroke="#243044" stroke-width="2"/>
+    <rect x="87.8" y="195" width="5" height="11.2" fill="#c48b45" stroke="#243044" stroke-width="2"/>
+    <rect x="97.6" y="195" width="5" height="11.2" fill="#c48b45" stroke="#243044" stroke-width="2"/>
+    <path d="M86.4 182.4 Q94.8 168.4 101.8 183.8" fill="#e2b56e" stroke="#243044" stroke-width="4"/>
+</svg>

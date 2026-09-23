@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>God promised a Rescuer</title>
+  <rect width="320" height="240" fill="#24345f"/>
+  <rect x="0" y="176" width="320" height="64" fill="#2f6b45"/>
+     <path d="M0 176 Q80 160 160 176 T320 176 V240 H0 Z" fill="#245338"/>
+     <path d="M168 50 L175.84 70.16 L196 78 L175.84 85.84 L168 106 L160.16 85.84 L140 78 L160.16 70.16 Z" fill="#ffe08a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <path d="M28 206 C 48 188, 62 214, 84 198 S 118 186, 132 204" fill="none" stroke="#8fd16a" stroke-width="8" stroke-linecap="round"/>
+     <circle cx="134" cy="202" r="8" fill="#8fd16a" stroke="#243044" stroke-width="3"/>
+     <circle cx="137" cy="200" r="1.8" fill="#243044"/>
+</svg>

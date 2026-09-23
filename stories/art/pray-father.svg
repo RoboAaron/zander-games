@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Pray to the Father</title>
+  <rect width="320" height="240" fill="#2c3f68"/>
+  <circle cx="250" cy="48" r="16" fill="#f4f1ea" stroke="#243044" stroke-width="3"/>
+     <path d="M160 20 L170 70 L160 60 L150 70 Z" fill="#ffe08a"/>
+     <path d="M143.1 137.2 L139.2 210 L156.1 210 L157.4 141.88 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M176.9 137.2 L180.8 210 L163.9 210 L162.6 141.88 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="137.9" y="121.99" width="44.2" height="52" rx="13" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="160" cy="113.8" r="23.4" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="152.98" cy="112.396" r="2.106" fill="#243044"/>
+    <circle cx="167.02" cy="112.396" r="2.106" fill="#243044"/>
+    <path d="M153.916 120.352 Q160 125.96799999999999 166.084 120.352" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M140 150 L160 132 L180 150" fill="none" stroke="#f0c9a0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

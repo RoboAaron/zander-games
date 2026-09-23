@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Made like him</title>
+  <rect width="320" height="240" fill="#c5e4f7"/>
+  <rect x="0" y="176" width="320" height="64" fill="#8dca86"/>
+     <circle cx="160" cy="52" r="22" fill="#ffe08a" stroke="#243044" stroke-width="4"/>
+     <path d="M103.96 125.52 L100.72 186 L114.76 186 L115.84 129.408 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M132.04 125.52 L135.28 186 L121.24 186 L120.16 129.408 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="99.64" y="112.884" width="36.720000000000006" height="43.2" rx="10.8" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="118" cy="106.08" r="19.439999999999998" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="112.168" cy="104.9136" r="2.1" fill="#243044"/>
+    <circle cx="123.832" cy="104.9136" r="2.1" fill="#243044"/>
+    <path d="M112.9456 111.5232 Q118 116.1888 123.0544 111.5232" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M186.04 138.48 L183.28 190 L195.24 190 L196.16 141.792 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M209.96 138.48 L212.72 190 L200.76 190 L199.84 141.792 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="182.36" y="127.71600000000001" width="31.28" height="36.800000000000004" rx="9.200000000000001" fill="#ef6f91" stroke="#243044" stroke-width="4"/>
+    <circle cx="198" cy="121.92" r="16.56" fill="#c68642" stroke="#243044" stroke-width="4"/>
+    <circle cx="193.032" cy="120.9264" r="2.1" fill="#243044"/>
+    <circle cx="202.968" cy="120.9264" r="2.1" fill="#243044"/>
+    <path d="M193.6944 126.5568 Q198 130.5312 202.3056 126.5568" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M78 70 H242" stroke="#f6c445" stroke-width="0"/>
+     <path d="M86 64 Q160 20 234 64" fill="none" stroke="#f6c445" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 0"/>
+</svg>

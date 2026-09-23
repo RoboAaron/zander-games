@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>God made the world</title>
+  <rect width="320" height="240" fill="#8fd3f4"/>
+  <line x1="82.0" y1="48.0" x2="94.0" y2="48.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="78.5" y1="61.0" x2="88.9" y2="67.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="69.0" y1="70.5" x2="75.0" y2="80.9" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="56.0" y1="74.0" x2="56.0" y2="86.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="43.0" y1="70.5" x2="37.0" y2="80.9" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="33.5" y1="61.0" x2="23.1" y2="67.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="30.0" y1="48.0" x2="18.0" y2="48.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="33.5" y1="35.0" x2="23.1" y2="29.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="43.0" y1="25.5" x2="37.0" y2="15.1" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="56.0" y1="22.0" x2="56.0" y2="10.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="69.0" y1="25.5" x2="75.0" y2="15.1" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="78.5" y1="35.0" x2="88.9" y2="29.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><circle cx="56" cy="48" r="22" fill="#ffd56a" stroke="#243044" stroke-width="4"/><path d="M270 30 L272.8 37.2 L280 40 L272.8 42.8 L270 50 L267.2 42.8 L260 40 L267.2 37.2 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/><path d="M240 63 L241.96 68.04 L247 70 L241.96 71.96 L240 77 L238.04 71.96 L233 70 L238.04 68.04 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <circle cx="250" cy="46" r="12" fill="#f4f1ea" stroke="#243044" stroke-width="3"/>
+     <rect x="0" y="168" width="320" height="72" fill="#7bc67e"/>
+     <circle cx="150" cy="118" r="46" fill="#3aa0d8" stroke="#243044" stroke-width="4"/>
+     <path d="M118 112 Q146 96 160 118 Q140 136 122 128 Z" fill="#7bc67e" stroke="#243044" stroke-width="3"/>
+     <polygon points="54,200 36,188 36,212" fill="#f2b85a" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="70" cy="200" rx="22" ry="13" fill="#f2b85a" stroke="#243044" stroke-width="4"/>
+    <circle cx="80" cy="198" r="2.5" fill="#243044"/>
+     <polygon points="256.8,151.7 278.9,141.5 272.1,158.5" fill="#fff" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="250" cy="150" rx="17" ry="9.35" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <circle cx="238.1" cy="148.3" r="6.8" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <polygon points="233,150 222.8,147.45 233,154.25" fill="#f2b85a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="237.25" cy="146.6" r="1.7" fill="#243044"/>
+</svg>

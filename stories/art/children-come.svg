@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Children can come</title>
+  <rect width="320" height="240" fill="#d7f3e4"/>
+  <rect x="0" y="176" width="320" height="64" fill="#7fbf78"/>
+     <circle cx="168" cy="87.55" r="26.55" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M168 90.18249999999999 C 129 136.95, 136.8 194, 142 196 L 194 196 C 199.2 194, 207 136.95, 168 90.18249999999999 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M164.1 105.1 L174.5 192" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><path d="M157.6 110.365 L113.4 124.405" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <path d="M178.4 110.365 L222.6 124.405" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="113.4" cy="124.405" r="6" fill="#f0c9a0" stroke="#243044" stroke-width="3"/>
+      <circle cx="222.6" cy="124.405" r="6" fill="#f0c9a0" stroke="#243044" stroke-width="3"/><circle cx="168" cy="87.55" r="17.55" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M151.45 89.55 Q168 60 184.55 89.55 Q168 84.9175 151.45 89.55 Z" fill="#3a2a22"/><path d="M158.3475 91.9375 Q168 109.4875 177.6525 91.9375 Q168 95.44749999999999 158.3475 91.9375 Z" fill="#3a2a22"/><circle cx="162.735" cy="85.497" r="2.1" fill="#243044"/>
+    <circle cx="173.265" cy="85.497" r="2.1" fill="#243044"/>
+    <path d="M163.437 91.464 Q168 95.676 172.563 91.464" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M51.86 156.32 L49.519999999999996 200 L59.66 200 L60.44 159.128 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M72.14 156.32 L74.48 200 L64.34 200 L63.56 159.128 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="48.739999999999995" y="147.194" width="26.520000000000003" height="31.200000000000003" rx="7.800000000000001" fill="#ef6f91" stroke="#243044" stroke-width="4"/>
+    <circle cx="62" cy="142.28" r="14.04" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="57.788" cy="141.4376" r="2.1" fill="#243044"/>
+    <circle cx="66.212" cy="141.4376" r="2.1" fill="#243044"/>
+    <path d="M58.3496 146.2112 Q62 149.5808 65.6504 146.2112" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M99.68 166.16 L97.76 202 L106.08 202 L106.72 168.464 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M116.32 166.16 L118.24 202 L109.92 202 L109.28 168.464 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="97.12" y="158.672" width="21.76" height="25.6" rx="6.4" fill="#f6a04d" stroke="#243044" stroke-width="4"/>
+    <circle cx="108" cy="154.64" r="11.52" fill="#8d5523" stroke="#243044" stroke-width="4"/>
+    <circle cx="104.544" cy="153.94879999999998" r="2.1" fill="#243044"/>
+    <circle cx="111.456" cy="153.94879999999998" r="2.1" fill="#243044"/>
+    <path d="M105.0048 157.86559999999997 Q108 160.63039999999998 110.9952 157.86559999999997" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M239.6 155.20000000000002 L237.2 200 L247.6 200 L248.4 158.08 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M260.4 155.20000000000002 L262.8 200 L252.4 200 L251.6 158.08 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="236.4" y="145.84" width="27.200000000000003" height="32" rx="8" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="250" cy="140.8" r="14.399999999999999" fill="#c68642" stroke="#243044" stroke-width="4"/>
+    <circle cx="245.68" cy="139.936" r="2.1" fill="#243044"/>
+    <circle cx="254.32" cy="139.936" r="2.1" fill="#243044"/>
+    <path d="M246.256 144.83200000000002 Q250 148.288 253.744 144.83200000000002" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

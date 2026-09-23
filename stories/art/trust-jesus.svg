@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Trust Jesus</title>
+  <rect width="320" height="240" fill="#d5eefb"/>
+  <rect x="0" y="180" width="320" height="60" fill="#8dca86"/>
+     <circle cx="200" cy="87.55" r="26.55" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M200 90.18249999999999 C 161 136.95, 168.8 194, 174 196 L 226 196 C 231.2 194, 239 136.95, 200 90.18249999999999 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M196.1 105.1 L206.5 192" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><path d="M189.6 110.365 L145.4 124.405" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <path d="M210.4 110.365 L254.6 124.405" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="145.4" cy="124.405" r="6" fill="#f0c9a0" stroke="#243044" stroke-width="3"/>
+      <circle cx="254.6" cy="124.405" r="6" fill="#f0c9a0" stroke="#243044" stroke-width="3"/><circle cx="200" cy="87.55" r="17.55" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M183.45 89.55 Q200 60 216.55 89.55 Q200 84.9175 183.45 89.55 Z" fill="#3a2a22"/><path d="M190.3475 91.9375 Q200 109.4875 209.6525 91.9375 Q200 95.44749999999999 190.3475 91.9375 Z" fill="#3a2a22"/><circle cx="194.735" cy="85.497" r="2.1" fill="#243044"/>
+    <circle cx="205.265" cy="85.497" r="2.1" fill="#243044"/>
+    <path d="M195.437 91.464 Q200 95.676 204.563 91.464" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M65 142 L62 198 L75 198 L76 145.6 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M91 142 L94 198 L81 198 L80 145.6 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="61" y="130.3" width="34" height="40" rx="10" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="78" cy="124" r="18" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="72.6" cy="122.92" r="2.1" fill="#243044"/>
+    <circle cx="83.4" cy="122.92" r="2.1" fill="#243044"/>
+    <path d="M73.32 129.04 Q78 133.36 82.68 129.04" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M132 162.6 C 108.2 147.2, 116.6 130.4, 132 141.6 C 147.4 130.4, 155.8 147.2, 132 162.6 Z" fill="#e85d75" stroke="#243044" stroke-width="4"/>
+</svg>

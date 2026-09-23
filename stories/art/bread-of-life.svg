@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Bread of life</title>
+  <rect width="320" height="240" fill="#fff3d6"/>
+  <ellipse cx="160" cy="150" rx="90" ry="28" fill="#c9844a" stroke="#243044" stroke-width="4"/>
+     <ellipse cx="100" cy="118" rx="36" ry="18" fill="#f2d16b" stroke="#243044" stroke-width="4"/>
+     <ellipse cx="160" cy="108" rx="40" ry="20" fill="#ffe08a" stroke="#243044" stroke-width="4"/>
+     <ellipse cx="214" cy="120" rx="32" ry="16" fill="#f2d16b" stroke="#243044" stroke-width="4"/>
+     <polygon points="106.4,150 91.1,139.8 91.1,160.2" fill="#7ec8ea" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="120" cy="150" rx="18.7" ry="11.049999999999999" fill="#7ec8ea" stroke="#243044" stroke-width="4"/>
+    <circle cx="128.5" cy="148.3" r="2.125" fill="#243044"/>
+     <polygon points="213.6,154 228.9,143.8 228.9,164.2" fill="#f2b85a" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="200" cy="154" rx="18.7" ry="11.049999999999999" fill="#f2b85a" stroke="#243044" stroke-width="4"/>
+    <circle cx="191.5" cy="152.3" r="2.125" fill="#243044"/>
+     <circle cx="70" cy="70" r="12" fill="#f0c9a0" stroke="#243044" stroke-width="3"/>
+     <circle cx="100" cy="58" r="12" fill="#c68642" stroke="#243044" stroke-width="3"/>
+     <circle cx="160" cy="50" r="12" fill="#8d5523" stroke="#243044" stroke-width="3"/>
+     <circle cx="220" cy="58" r="12" fill="#e0aa78" stroke="#243044" stroke-width="3"/>
+     <circle cx="250" cy="74" r="12" fill="#f0c9a0" stroke="#243044" stroke-width="3"/>
+</svg>

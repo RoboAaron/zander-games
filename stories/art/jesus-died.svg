@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus died for us</title>
+  <rect width="320" height="240" fill="#f3c7a0"/>
+  <ellipse cx="160" cy="210" rx="180" ry="70" fill="#7fbf78"/>
+     <rect x="160" y="36" width="16" height="130" rx="3" fill="#6e4328" stroke="#243044" stroke-width="4"/>
+    <rect x="131.6" y="62" width="72.80000000000001" height="16" rx="3" fill="#6e4328" stroke="#243044" stroke-width="4"/>
+     <rect x="64.7" y="183.6" width="5.699999999999999" height="13.299999999999999" rx="3" fill="#f7f4ee" stroke="#243044" stroke-width="3"/>
+    <rect x="83.7" y="183.6" width="5.699999999999999" height="13.299999999999999" rx="3" fill="#f7f4ee" stroke="#243044" stroke-width="3"/>
+    <ellipse cx="78" cy="176" rx="24.7" ry="15.2" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <circle cx="95.1" cy="168.4" r="10.45" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <circle cx="98.9" cy="166.5" r="2.09" fill="#243044"/>
+    <ellipse cx="102.7" cy="172.2" rx="3.8" ry="2.4699999999999998" fill="#f3b7c4"/>
+     <circle cx="250" cy="190" r="8" fill="#f2d16b" stroke="#243044" stroke-width="3"/>
+     <circle cx="236" cy="198" r="6" fill="#e85d75" stroke="#243044" stroke-width="3"/>
+</svg>

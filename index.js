@@ -6,6 +6,7 @@
 
   var GAMES = [
     { href: "sharks/", name: "Shark spotter", emoji: "🦈", tile: "#0c3c5a" },
+    { href: "stories/", name: "Story spotter", emoji: "📖", tile: "#4a2f6e" },
     { href: "marine/", name: "Sea life spotter", emoji: "🌊", tile: "#0a4a5c" },
     { href: "pokemon/", name: "Catch them", emoji: "👾", tile: "#3b2f6b" },
     { href: "color-buttons/", name: "Color buttons", emoji: "🎨", tile: "#5a2f4a" },
