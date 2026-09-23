@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>God is good</title>
+  <rect width="320" height="240" fill="#ffd7a1"/>
+  <line x1="242.0" y1="70.0" x2="254.0" y2="70.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="237.7" y1="86.0" x2="248.1" y2="92.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="226.0" y1="97.7" x2="232.0" y2="108.1" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="210.0" y1="102.0" x2="210.0" y2="114.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="194.0" y1="97.7" x2="188.0" y2="108.1" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="182.3" y1="86.0" x2="171.9" y2="92.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="178.0" y1="70.0" x2="166.0" y2="70.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="182.3" y1="54.0" x2="171.9" y2="48.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="194.0" y1="42.3" x2="188.0" y2="31.9" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="210.0" y1="38.0" x2="210.0" y2="26.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="226.0" y1="42.3" x2="232.0" y2="31.9" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="237.7" y1="54.0" x2="248.1" y2="48.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><circle cx="210" cy="70" r="28" fill="#ffd56a" stroke="#243044" stroke-width="4"/><path d="M150 171.4 C 71.80000000000001 120.8, 99.4 65.60000000000001, 150 102.4 C 200.6 65.60000000000001, 228.2 120.8, 150 171.4 Z" fill="#e85d75" stroke="#243044" stroke-width="4"/>
+     <path d="M118 128 Q150 150 182 128" fill="none" stroke="#243044" stroke-width="5" stroke-linecap="round"/>
+     <circle cx="128" cy="112" r="4" fill="#243044"/>
+     <circle cx="172" cy="112" r="4" fill="#243044"/>
+</svg>

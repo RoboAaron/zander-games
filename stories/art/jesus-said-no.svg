@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus said no</title>
+  <rect width="320" height="240" fill="#f6e2b8"/>
+  <rect x="0" y="180" width="320" height="60" fill="#e6c48a"/>
+     <circle cx="48" cy="168" r="14" fill="#c9844a" stroke="#243044" stroke-width="4"/>
+     <circle cx="78" cy="178" r="10" fill="#b8743a" stroke="#243044" stroke-width="3"/>
+     <ellipse cx="62" cy="92" rx="36" ry="48" fill="#c5c8d4" fill-opacity="0.85" stroke="#243044" stroke-width="4"/>
+     <circle cx="210" cy="78.9" r="27.900000000000002" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M210 81.735 C 168 132.10000000000002, 176.4 194, 182 196 L 238 196 C 243.6 194, 252 132.10000000000002, 210 81.735 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M205.8 97.80000000000001 L217 192" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><path d="M218.4 105.36000000000001 L240.8 82.68" stroke="#f7f3ea" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="243.6" cy="79.845" r="7" fill="#f0c9a0" stroke="#243044" stroke-width="3"/><circle cx="210" cy="78.9" r="18.900000000000002" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M192.1 80.9 Q210 50 227.9 80.9 Q210 76.06500000000001 192.1 80.9 Z" fill="#3a2a22"/><path d="M199.605 83.625 Q210 102.525 220.395 83.625 Q210 87.405 199.605 83.625 Z" fill="#3a2a22"/><circle cx="204.33" cy="76.766" r="2.1" fill="#243044"/>
+    <circle cx="215.67" cy="76.766" r="2.1" fill="#243044"/>
+    <path d="M205.086 83.19200000000001 Q210 87.72800000000001 214.914 83.19200000000001" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

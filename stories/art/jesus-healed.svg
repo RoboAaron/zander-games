@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus healed</title>
+  <rect width="320" height="240" fill="#e7f4ff"/>
+  <rect x="0" y="180" width="320" height="60" fill="#d9c7ae"/>
+     <rect x="36" y="168" width="70" height="16" rx="6" fill="#f7f3ea" stroke="#243044" stroke-width="4"/>
+     <path d="M135.7 126.39999999999999 L132.4 188 L146.7 188 L147.8 130.35999999999999 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M164.3 126.39999999999999 L167.6 188 L153.3 188 L152.2 130.35999999999999 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="131.3" y="113.53" width="37.400000000000006" height="44" rx="11" fill="#7bc67e" stroke="#243044" stroke-width="4"/>
+    <circle cx="150" cy="106.6" r="19.8" fill="#e0aa78" stroke="#243044" stroke-width="4"/>
+    <circle cx="144.06" cy="105.41199999999999" r="2.1" fill="#243044"/>
+    <circle cx="155.94" cy="105.41199999999999" r="2.1" fill="#243044"/>
+    <path d="M144.852 112.14399999999999 Q150 116.896 155.148 112.14399999999999" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M132 150 L118 118" stroke="#e0aa78" stroke-width="8" stroke-linecap="round"/>
+     <path d="M168 150 L182 118" stroke="#e0aa78" stroke-width="8" stroke-linecap="round"/>
+     <circle cx="240" cy="90.2" r="25.200000000000003" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M240 92.63000000000001 C 204 135.8, 211.2 188, 216 190 L 264 190 C 268.8 188, 276 135.8, 240 92.63000000000001 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M236.4 106.4 L246 186" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><circle cx="240" cy="90.2" r="16.200000000000003" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M224.8 92.2 Q240 64 255.2 92.2 Q240 87.77 224.8 92.2 Z" fill="#3a2a22"/><path d="M231.09 94.25 Q240 110.45 248.91 94.25 Q240 97.49000000000001 231.09 94.25 Z" fill="#3a2a22"/><circle cx="235.14" cy="88.22800000000001" r="2.1" fill="#243044"/>
+    <circle cx="244.86" cy="88.22800000000001" r="2.1" fill="#243044"/>
+    <path d="M235.788 93.736 Q240 97.62400000000001 244.212 93.736" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <circle cx="200" cy="120" r="10" fill="#ffe08a" stroke="#243044" stroke-width="3"/>
+</svg>

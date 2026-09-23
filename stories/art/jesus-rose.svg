@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus rose</title>
+  <rect width="320" height="240" fill="#f7d7a4"/>
+  <line x1="290.0" y1="150.0" x2="302.0" y2="150.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="284.6" y1="170.0" x2="295.0" y2="176.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="270.0" y1="184.6" x2="276.0" y2="195.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="250.0" y1="190.0" x2="250.0" y2="202.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="230.0" y1="184.6" x2="224.0" y2="195.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="215.4" y1="170.0" x2="205.0" y2="176.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="210.0" y1="150.0" x2="198.0" y2="150.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="215.4" y1="130.0" x2="205.0" y2="124.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="230.0" y1="115.4" x2="224.0" y2="105.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="250.0" y1="110.0" x2="250.0" y2="98.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="270.0" y1="115.4" x2="276.0" y2="105.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="284.6" y1="130.0" x2="295.0" y2="124.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><circle cx="250" cy="150" r="36" fill="#ffd56a" stroke="#243044" stroke-width="4"/>
+     <path d="M40 80 H150 V200 H40 Z" fill="#c7b7a2" stroke="#243044" stroke-width="4"/>
+     <path d="M40 80 Q95 40 150 80" fill="#b7a48e" stroke="#243044" stroke-width="4"/>
+     <rect x="78" y="120" width="40" height="80" rx="4" fill="#fff4c2" stroke="#243044" stroke-width="4"/>
+     <circle cx="188" cy="160" r="28" fill="#d9c7ae" stroke="#243044" stroke-width="4"/>
+     <path d="M96 138 L99.36 146.64 L108 150 L99.36 153.36 L96 162 L92.64 153.36 L84 150 L92.64 146.64 Z" fill="#ffe08a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+</svg>

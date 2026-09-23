@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>People turned away</title>
+  <rect width="320" height="240" fill="#d7ecf8"/>
+  <rect x="0" y="176" width="320" height="64" fill="#7fbf78"/>
+     <circle cx="48" cy="64" r="18" fill="#ffe08a" stroke="#243044" stroke-width="4"/>
+     <rect x="141.9" y="150" width="16.200000000000003" height="45.900000000000006" rx="3" fill="#8a5a32" stroke="#243044" stroke-width="3"/>
+    <circle cx="150" cy="139.2" r="35.1" fill="#3caa55" stroke="#243044" stroke-width="4"/>
+    <circle cx="125.7" cy="152.7" r="21.6" fill="#2f9a49" stroke="#243044" stroke-width="4"/>
+    <circle cx="174.3" cy="155.4" r="21.6" fill="#46b85f" stroke="#243044" stroke-width="4"/>
+     <path d="M217 140 L214 196 L227 196 L228 143.6 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M243 140 L246 196 L233 196 L232 143.6 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="213" y="128.3" width="34" height="40" rx="10" fill="#6a8f4a" stroke="#243044" stroke-width="4"/>
+    <circle cx="230" cy="122" r="18" fill="#e0aa78" stroke="#243044" stroke-width="4"/>
+    <circle cx="224.6" cy="120.92" r="2.1" fill="#243044"/>
+    <circle cx="235.4" cy="120.92" r="2.1" fill="#243044"/>
+    <path d="M225.32 127.04 Q230 131.36 234.68 127.04" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M257.08 150.96 L254.56 198 L265.48 198 L266.32 153.984 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M278.92 150.96 L281.44 198 L270.52 198 L269.68 153.984 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="253.72" y="141.132" width="28.560000000000002" height="33.6" rx="8.4" fill="#c9844a" stroke="#243044" stroke-width="4"/>
+    <circle cx="268" cy="135.84" r="15.12" fill="#8d5523" stroke="#243044" stroke-width="4"/>
+    <circle cx="263.464" cy="134.93280000000001" r="2.1" fill="#243044"/>
+    <circle cx="272.536" cy="134.93280000000001" r="2.1" fill="#243044"/>
+    <path d="M264.0688 140.0736 Q268 143.7024 271.9312 140.0736" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

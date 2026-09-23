@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Jesus is God’s Son</title>
+  <rect width="320" height="240" fill="#b9e0f6"/>
+  <line x1="274.0" y1="42.0" x2="286.0" y2="42.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="270.8" y1="54.0" x2="281.2" y2="60.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="262.0" y1="62.8" x2="268.0" y2="73.2" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="250.0" y1="66.0" x2="250.0" y2="78.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="238.0" y1="62.8" x2="232.0" y2="73.2" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="229.2" y1="54.0" x2="218.8" y2="60.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="226.0" y1="42.0" x2="214.0" y2="42.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="229.2" y1="30.0" x2="218.8" y2="24.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="238.0" y1="21.2" x2="232.0" y2="10.8" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="250.0" y1="18.0" x2="250.0" y2="6.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="262.0" y1="21.2" x2="268.0" y2="10.8" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><line x1="270.8" y1="30.0" x2="281.2" y2="24.0" stroke="#f6c445" stroke-width="5" stroke-linecap="round"/><circle cx="250" cy="42" r="20" fill="#ffd56a" stroke="#243044" stroke-width="4"/>
+     <path d="M160 8 L168 36 L160 30 L152 36 Z" fill="#ffe08a"/>
+     <path d="M0 150 Q40 134 80 150 T160 150 T240 150 T320 150 V240 H0 Z" fill="#3aa0d8"/>
+    <path d="M0 168 Q40 156 80 168 T160 168 T240 168 T320 168" fill="none" stroke="#1d6fa5" stroke-width="4"/>
+     <circle cx="160" cy="68.2" r="25.200000000000003" fill="#ffe7a3" stroke="#e2ae2f" stroke-width="4"/><path d="M160 70.63000000000001 C 124 113.80000000000001, 131.2 166, 136 168 L 184 168 C 188.8 166, 196 113.80000000000001, 160 70.63000000000001 Z" fill="#f7f3ea" stroke="#243044" stroke-width="4"/><path d="M156.4 84.4 L166 164" stroke="#d4a24c" stroke-width="6" stroke-linecap="round"/><circle cx="160" cy="68.2" r="16.200000000000003" fill="#f0c9a0" stroke="#243044" stroke-width="4"/><path d="M144.8 70.2 Q160 42 175.2 70.2 Q160 65.77 144.8 70.2 Z" fill="#3a2a22"/><path d="M151.09 72.25 Q160 88.45 168.91 72.25 Q160 75.49000000000001 151.09 72.25 Z" fill="#3a2a22"/><circle cx="155.14" cy="66.22800000000001" r="2.1" fill="#243044"/>
+    <circle cx="164.86" cy="66.22800000000001" r="2.1" fill="#243044"/>
+    <path d="M155.788 71.736 Q160 75.62400000000001 164.212 71.736" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <polygon points="236.4,79.6 257.2,70 250.8,86" fill="#fff" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="230" cy="78" rx="16" ry="8.8" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <circle cx="218.8" cy="76.4" r="6.4" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <polygon points="214,78 204.4,75.6 214,82" fill="#f2b85a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="218" cy="74.8" r="1.6" fill="#243044"/>
+</svg>

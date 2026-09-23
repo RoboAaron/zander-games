@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>The Helper</title>
+  <rect width="320" height="240" fill="#e7f2ff"/>
+  <polygon points="148,91 109,73 121,103" fill="#fff" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <ellipse cx="160" cy="88" rx="30" ry="16.5" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <circle cx="181" cy="85" r="12" fill="#fff" stroke="#243044" stroke-width="4"/>
+    <polygon points="190,88 208,83.5 190,95.5" fill="#f2b85a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="182.5" cy="82" r="3" fill="#243044"/>
+     <path d="M150 150 C150 118, 190 118, 190 150 Z" fill="#f6c445" stroke="#243044" stroke-width="4"/>
+     <path d="M162 150 C162 132, 180 132, 180 150 Z" fill="#fff6d0" stroke="#243044" stroke-width="3"/>
+     <path d="M70 190 Q100 160 130 190" fill="none" stroke="#f0c9a0" stroke-width="10" stroke-linecap="round"/>
+     <path d="M190 190 Q220 160 250 190" fill="none" stroke="#e0aa78" stroke-width="10" stroke-linecap="round"/>
+</svg>

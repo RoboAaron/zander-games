@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>A promised child</title>
+  <rect width="320" height="240" fill="#f8e2b8"/>
+  <path d="M230 32 L234.48 43.519999999999996 L246 48 L234.48 52.480000000000004 L230 64 L225.52 52.480000000000004 L214 48 L225.52 43.519999999999996 Z" fill="#fff6cc" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <path d="M141.8 121.60000000000001 L137.6 200 L155.8 200 L157.2 126.64 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M178.2 121.60000000000001 L182.4 200 L164.2 200 L162.8 126.64 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="136.2" y="105.22" width="47.6" height="56" rx="14" fill="#f7f3ea" stroke="#243044" stroke-width="4"/>
+    <circle cx="160" cy="96.4" r="25.2" fill="#f0c9a0" stroke="#243044" stroke-width="4"/>
+    <circle cx="152.44" cy="94.888" r="2.268" fill="#243044"/>
+    <circle cx="167.56" cy="94.888" r="2.268" fill="#243044"/>
+    <path d="M153.448 103.456 Q160 109.504 166.552 103.456" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M118 78 L132 108 H104 Z M132 74 L148 108 H118 Z M148 78 L162 108 H132 Z" fill="#f6c445" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+</svg>

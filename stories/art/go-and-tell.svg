@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>Go and tell</title>
+  <rect width="320" height="240" fill="#e7f6e0"/>
+  <rect x="0" y="180" width="320" height="60" fill="#c9a36a"/>
+     <path d="M30 200 Q100 170 160 200 T290 190" fill="none" stroke="#f7f3ea" stroke-width="16" stroke-linecap="round"/>
+     <path d="M58.3 137.6 L55.6 188 L67.3 188 L68.2 140.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <path d="M81.7 137.6 L84.4 188 L72.7 188 L71.8 140.84 Z" fill="#31415f" stroke="#243044" stroke-width="3"/>
+    <rect x="54.7" y="127.07000000000001" width="30.6" height="36" rx="9" fill="#5b8def" stroke="#243044" stroke-width="4"/>
+    <circle cx="70" cy="121.4" r="16.2" fill="#c68642" stroke="#243044" stroke-width="4"/>
+    <circle cx="65.14" cy="120.42800000000001" r="2.1" fill="#243044"/>
+    <circle cx="74.86" cy="120.42800000000001" r="2.1" fill="#243044"/>
+    <path d="M65.788 125.936 Q70 129.824 74.212 125.936" fill="none" stroke="#243044" stroke-width="2.6" stroke-linecap="round"/>
+     <path d="M96 84 L99.36 92.64 L108 96 L99.36 99.36 L96 108 L92.64 99.36 L84 96 L92.64 92.64 Z" fill="#ffe08a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <polygon points="230,122.8 199.6,143.6 260.4,143.6" fill="#e85d75" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="207.6" y="143.6" width="44.800000000000004" height="32" rx="3" fill="#f7f3ea" stroke="#243044" stroke-width="4"/>
+     <polygon points="280,145.3 259.1,159.6 300.9,159.6" fill="#7a6ad6" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="264.6" y="159.6" width="30.800000000000004" height="22" rx="3" fill="#fff" stroke="#243044" stroke-width="4"/>
+</svg>

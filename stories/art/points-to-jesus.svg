@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>It points to Jesus</title>
+  <rect width="320" height="240" fill="#1d2a55"/>
+  <path d="M108 107.80000000000001 L48.2 119.3 L48.2 172.2 L108 158.4 Z" fill="#f4e2b5" stroke="#243044" stroke-width="4"/>
+    <path d="M108 107.80000000000001 L167.8 119.3 L167.8 172.2 L108 158.4 Z" fill="#fff8ea" stroke="#243044" stroke-width="4"/>
+    <path d="M66.6 130.8 H94.2 M66.6 142.3 H91.9 M66.6 153.8 H89.6" stroke="#d2b48a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M124.1 133.1 H151.7 M124.1 144.6 H149.4 M124.1 156.1 H147.1" stroke="#d2b48a" stroke-width="3" stroke-linecap="round"/>
+     <path d="M168 132 H230" stroke="#f6c445" stroke-width="8" stroke-linecap="round"/>
+     <path d="M214 116 L246 132 L214 148 Z" fill="#f6c445" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+     <path d="M268 60 L273.04 72.96 L286 78 L273.04 83.04 L268 96 L262.96 83.04 L250 78 L262.96 72.96 Z" fill="#ffe08a" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+     <path d="M248 168 H288 L268 150 Z" fill="#8a5a32" stroke="#243044" stroke-width="4" stroke-linejoin="round"/>
+     <rect x="258" y="158" width="20" height="12" fill="#f7f3ea" stroke="#243044" stroke-width="3"/>
+</svg>

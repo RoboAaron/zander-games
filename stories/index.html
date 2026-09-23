@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Story spotter</title>
+    <link rel="stylesheet" href="../shared/kids.css?v=1" />
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <main class="game" aria-label="Story spotter">
+      <div class="kids-topbar" id="kids-topbar"></div>
+      <header class="top">
+        <p class="label" id="how-to">
+          <span class="how-to-text">Tap a picture to keep it.</span>
+        </p>
+        <p class="cheer" id="cheer" aria-live="polite">Tap a story!</p>
+        <p class="spoken" id="spoken" aria-live="polite"></p>
+      </header>
+
+      <div class="sets" id="sets" role="group" aria-label="Story sets"></div>
+
+      <div class="field" id="field" role="group" aria-label="Stories to tap"></div>
+
+      <section class="logbook" aria-labelledby="book-heading">
+        <div class="logbook-head">
+          <h2 id="book-heading">The gospel story</h2>
+          <button class="hear-story" id="hear-story" type="button" hidden>Hear the story</button>
+          <button class="reset-btn" id="reset-btn" type="button">Start over</button>
+        </div>
+        <p class="progress" id="progress" aria-live="polite">Found 0 of 8</p>
+        <div class="pips" id="pips" aria-hidden="true"></div>
+        <ul class="caught-list" id="book-list"></ul>
+      </section>
+    </main>
+    <script src="../shared/kids.js?v=2"></script>
+    <script src="game.js?v=1"></script>
+  </body>
+</html>

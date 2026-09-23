@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img">
+  <title>God’s Word</title>
+  <rect width="320" height="240" fill="#f6e7c8"/>
+  <path d="M160 72.4 L71.60000000000001 89.4 L71.60000000000001 167.6 L160 147.2 Z" fill="#f4e2b5" stroke="#243044" stroke-width="4"/>
+    <path d="M160 72.4 L248.39999999999998 89.4 L248.39999999999998 167.6 L160 147.2 Z" fill="#fff8ea" stroke="#243044" stroke-width="4"/>
+    <path d="M98.80000000000001 106.4 H139.6 M98.80000000000001 123.4 H136.2 M98.80000000000001 140.4 H132.8" stroke="#d2b48a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M183.8 109.8 H224.6 M183.8 126.8 H221.2 M183.8 143.8 H217.8" stroke="#d2b48a" stroke-width="3" stroke-linecap="round"/><path d="M160 26 L164.48 37.519999999999996 L176 42 L164.48 46.480000000000004 L160 58 L155.52 46.480000000000004 L144 42 L155.52 37.519999999999996 Z" fill="#f6c445" stroke="#243044" stroke-width="3" stroke-linejoin="round"/>
+</svg>
