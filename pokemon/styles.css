@@ -362,7 +362,7 @@ body.modal-open {
 .modal-card {
   position: relative;
   z-index: 1;
-  width: min(100%, 560px);
+  width: min(100%, 720px);
   margin: auto;
   background: linear-gradient(180deg, #342a58, #1a1d24);
   border: 2px solid rgba(255, 255, 255, 0.14);
@@ -408,7 +408,7 @@ body.modal-open {
 .modal-img {
   width: 100%;
   height: auto;
-  max-height: 46vh;
+  max-height: 58vh;
   object-fit: contain;
   display: block;
   background: rgba(255, 255, 255, 0.08);
@@ -500,6 +500,10 @@ body.modal-open {
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
 }
 
+.modal-another {
+  margin-top: 12px;
+}
+
 .modal-section {
   margin-top: 18px;
 }
@@ -541,8 +545,8 @@ body.modal-open {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
 }
 
 .gallery-item {
@@ -564,7 +568,7 @@ body.modal-open {
 
 .gallery-item img {
   width: 100%;
-  height: 110px;
+  height: 200px;
   object-fit: contain;
   display: block;
   background: rgba(255, 255, 255, 0.06);
@@ -572,8 +576,8 @@ body.modal-open {
 
 .gallery-credit {
   display: block;
-  padding: 4px 6px;
-  font-size: 0.68rem;
+  padding: 6px 8px;
+  font-size: 0.8rem;
   line-height: 1.2;
   color: var(--muted);
   white-space: nowrap;
