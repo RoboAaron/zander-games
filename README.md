@@ -10,7 +10,7 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 
 - **[🦈 Shark spotter](sharks/)** — tap real shark species to spot them; open an info card with facts and real photos for each one in your logbook.
 - **[🌊 Sea life spotter](marine/)** — tap real marine creatures (eels, shrimp, crabs, lobsters, and more) to spot them; open an info card with facts and real photos for each one in your logbook.
-- **[👾 Catch them](pokemon/)** — tap Pokémon to catch them; your collection is saved and you can hear each name.
+- **[👾 PokéCatch](pokemon/)** — tap Pokémon to catch them; open a card to hear a fact and see pictures. Your collection is saved.
 - **[🎨 Color buttons](color-buttons/)** — match the big color square; earns stars as you go.
 - **[🦖 Dino count](dino-count/)** — count the T-rex and long-neck dinos, tap the number (1–20); earns stars.
 
