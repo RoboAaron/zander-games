@@ -3,7 +3,7 @@
 (function (exports) {
   "use strict";
 
-  var PLANE_CACHE = "zander-plane-v1";
+  var PLANE_CACHE = "zander-plane-v2";
   var SAVED_KEY = "zander-plane-saved";
   var AUTOSTART_KEY = "zander-plane-autostart";
   var GAMES = ["sharks/", "marine/", "stories/", "pokemon/", "dino-count/", "color-buttons/"];
@@ -118,12 +118,18 @@
     return "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + padded + ".png";
   }
 
+  // Large picture the PokéCatch card opens on. Same path as fullArtUrl in pokemon/game.js.
+  function fullArtUrl(id) {
+    var padded = String(id).padStart(3, "0");
+    return "https://assets.pokemon.com/assets/cms2/img/pokedex/full/" + padded + ".png";
+  }
+
   function cryUrl(slug) {
     return "https://play.pokemonshowdown.com/audio/cries/" + slug + ".mp3";
   }
 
   function pokemonAssetUrls(entry) {
-    var urls = [spriteUrl(entry.id), cryUrl(entry.slug)];
+    var urls = [spriteUrl(entry.id), fullArtUrl(entry.id), cryUrl(entry.slug)];
     for (var i = 0; i < GALLERY_GENS.length; i += 1) {
       urls.push(SHOWDOWN_SPRITES + "/gen" + GALLERY_GENS[i] + "/" + entry.slug + ".png");
     }
@@ -203,6 +209,7 @@
   exports.buildLocalPack = buildLocalPack;
   exports.rosterFromSource = rosterFromSource;
   exports.spriteUrl = spriteUrl;
+  exports.fullArtUrl = fullArtUrl;
   exports.cryUrl = cryUrl;
   exports.pokemonAssetUrls = pokemonAssetUrls;
   exports.inatApiUrl = inatApiUrl;
