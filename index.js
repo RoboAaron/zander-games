@@ -8,7 +8,7 @@
     { href: "sharks/", name: "Shark spotter", emoji: "🦈", tile: "#0c3c5a" },
     { href: "stories/", name: "Story spotter", emoji: "📖", tile: "#4a2f6e" },
     { href: "marine/", name: "Sea life spotter", emoji: "🌊", tile: "#0a4a5c" },
-    { href: "pokemon/", name: "Catch them", emoji: "👾", tile: "#3b2f6b" },
+    { href: "pokemon/", name: "PokéCatch", say: "Poh-kay Catch", emoji: "👾", tile: "#3b2f6b" },
     { href: "color-buttons/", name: "Color buttons", emoji: "🎨", tile: "#5a2f4a" },
     { href: "dino-count/", name: "Dino count", emoji: "🦕", tile: "#2f5a37" },
   ];
@@ -46,7 +46,7 @@
     hear.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      if (window.Kids) window.Kids.sound.speak(game.name);
+      if (window.Kids) window.Kids.sound.speak(game.say || game.name);
     });
 
     a.append(emoji, name, hear);
