@@ -134,11 +134,78 @@ body {
   }
 }
 
+.plane-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: min(100%, 720px);
+  min-height: 112px;
+  padding: 16px 22px;
+  border: 4px solid #1a1a1a;
+  border-radius: 28px;
+  background: #ffd166;
+  color: #1a1a1a;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.28);
+}
+
+.plane-save:active {
+  transform: translateY(4px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.28);
+}
+
+.plane-save:focus-visible {
+  outline: 4px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.plane-save.is-done {
+  background: #7ee787;
+}
+
+.plane-save.is-saving {
+  cursor: progress;
+}
+
+.plane-emoji {
+  font-size: clamp(2.4rem, 10vw, 3.4rem);
+  line-height: 1;
+}
+
+.plane-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.plane-label {
+  font-size: clamp(1.45rem, 5.5vw, 2.1rem);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.plane-status {
+  min-height: 1.3em;
+  font-size: clamp(1.15rem, 4.5vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.plane-status:empty {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .tile {
+  .tile,
+  .plane-save {
     transition: none;
   }
-  .tile:active {
+  .tile:active,
+  .plane-save:active {
     transform: none;
   }
 }
