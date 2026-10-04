@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#0e1726" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Zander's games" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <title>Zander's games</title>
+    <link rel="apple-touch-icon" href="icon-180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="shared/kids.css?v=1" />
-    <link rel="stylesheet" href="index.css?v=1" />
+    <link rel="stylesheet" href="index.css?v=2" />
   </head>
   <body>
     <main class="hub" aria-label="Games menu">
@@ -14,9 +21,17 @@
         <h1 class="hub-title">Zander's games</h1>
         <p class="hub-sub" id="hub-sub"><span class="hub-sub-text">Pick a game to play!</span></p>
       </header>
+      <button type="button" class="plane-save" id="plane-save">
+        <span class="plane-emoji" aria-hidden="true">✈️</span>
+        <span class="plane-copy">
+          <span class="plane-label" id="plane-label">Save for the plane</span>
+          <span class="plane-status" id="plane-status"></span>
+        </span>
+      </button>
       <nav class="tiles" id="tiles" aria-label="Choose a game"></nav>
     </main>
     <script src="shared/kids.js?v=2"></script>
     <script src="index.js?v=3"></script>
+    <script src="plane.js?v=1"></script>
   </body>
 </html>

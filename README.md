@@ -19,6 +19,7 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 - **Read-to-me everywhere:** a one-line "how to play" is spoken after the first tap, and every game has a speaker button to hear it again.
 - **Saved progress:** the shark and sea life logbooks and caught Pokémon persist; Color buttons and Dino count keep a running star count.
 - **One sound switch:** muting in any game (key `zander-sound`) mutes them all.
+- **Plane:** on the menu, tap **Save for the plane** while online. The games, pictures, and cries are stored on the tablet and still open with wifi off. Tap it again before a trip to refresh the pack.
 - **Healthy by design:** no timers, no ads, no sign-up, no urgency; big tap targets and reduced-motion support.
 
 Shared helpers live in [`shared/kids.js`](shared/kids.js) and [`shared/kids.css`](shared/kids.css).
