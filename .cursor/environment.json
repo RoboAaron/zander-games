@@ -1,0 +1,11 @@
+{
+  "name": "Zander games",
+  "ports": [{ "name": "web", "port": 8000 }],
+  "terminals": [
+    {
+      "name": "web",
+      "command": "python3 -m http.server 8000 --bind 0.0.0.0",
+      "description": "Static file server for the browser games. Open http://localhost:8000/ and pick a game folder (color-buttons/, dino-count/, pokemon/)."
+    }
+  ]
+}
