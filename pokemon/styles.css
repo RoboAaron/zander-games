@@ -334,6 +334,40 @@ body {
   }
 }
 
+.burst {
+  position: fixed;
+  z-index: 300;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.burst-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: burst-fly 0.9s ease-out forwards;
+}
+
+@keyframes burst-fly {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.4);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx), var(--dy)) scale(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .poke-card,
   .poke-sprite,
@@ -344,5 +378,8 @@ body {
   .poke-sprite,
   .poke-card.catching .ball {
     animation: none;
+  }
+  .burst-dot {
+    animation-duration: 0.01s;
   }
 }
