@@ -2,7 +2,7 @@
 // (/zander-games/ on GitHub Pages, / on a local server).
 // Keep this name identical to PLANE_CACHE in plane.js. Bump both together
 // so a new save drops a stale pack.
-var PLANE_CACHE = "zander-plane-v2";
+var PLANE_CACHE = "zander-plane-v3";
 var NETWORK_WAIT_MS = 8000;
 
 self.addEventListener("install", function () {
