@@ -3,7 +3,7 @@
 (function (exports) {
   "use strict";
 
-  var PLANE_CACHE = "zander-plane-v2";
+  var PLANE_CACHE = "zander-plane-v3";
   var SAVED_KEY = "zander-plane-saved";
   var AUTOSTART_KEY = "zander-plane-autostart";
   var GAMES = ["sharks/", "marine/", "stories/", "pokemon/", "dino-count/", "color-buttons/"];
@@ -138,6 +138,19 @@
     return urls;
   }
 
+  // Extra card pictures hotlinked in pokemon/game.js. Kept beside the older sprite list.
+  function galleryUrlsFromSource(text) {
+    var out = [];
+    var re = /pics:\s*\[([\s\S]*?)\]/g;
+    var block;
+    while ((block = re.exec(text))) {
+      var urlRe = /url:\s*"(https:\/\/[^"]+)"/g;
+      var match;
+      while ((match = urlRe.exec(block[1]))) out.push(match[1]);
+    }
+    return out;
+  }
+
   function inatApiUrl(id) {
     return "https://api.inaturalist.org/v1/taxa/" + id;
   }
@@ -196,6 +209,7 @@
     rosterFromSource(scripts["pokemon/game.js"] || "").forEach(function (entry) {
       urls = urls.concat(pokemonAssetUrls(entry));
     });
+    urls = urls.concat(galleryUrlsFromSource(scripts["pokemon/game.js"] || ""));
     inatIds((scripts["sharks/game.js"] || "") + "\n" + (scripts["marine/game.js"] || "")).forEach(function (id) {
       urls.push(inatApiUrl(id));
     });
@@ -212,6 +226,7 @@
   exports.fullArtUrl = fullArtUrl;
   exports.cryUrl = cryUrl;
   exports.pokemonAssetUrls = pokemonAssetUrls;
+  exports.galleryUrlsFromSource = galleryUrlsFromSource;
   exports.inatApiUrl = inatApiUrl;
   exports.photoSizes = photoSizes;
   exports.photosFromTaxon = photosFromTaxon;
