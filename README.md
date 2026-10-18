@@ -13,6 +13,7 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 - **[👾 PokéCatch](pokemon/)** — tap Pokémon to catch them; open a card to hear a fact and see pictures. Your collection is saved.
 - **[🎨 Color buttons](color-buttons/)** — match the big color square; earns stars as you go.
 - **[🦖 Dino count](dino-count/)** — count the T-rex and long-neck dinos, tap the number (1–20); earns stars.
+- **[🦖 Dino tap](dino-tap/)** — tap the dinosaurs as they pop up; Normal or Unlimited, with stars.
 
 ## For grown-ups
 

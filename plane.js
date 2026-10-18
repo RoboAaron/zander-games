@@ -3,10 +3,10 @@
 (function (exports) {
   "use strict";
 
-  var PLANE_CACHE = "zander-plane-v3";
+  var PLANE_CACHE = "zander-plane-v4";
   var SAVED_KEY = "zander-plane-saved";
   var AUTOSTART_KEY = "zander-plane-autostart";
-  var GAMES = ["sharks/", "marine/", "stories/", "pokemon/", "dino-count/", "color-buttons/"];
+  var GAMES = ["sharks/", "marine/", "stories/", "pokemon/", "dino-count/", "color-buttons/", "dino-tap/"];
   var HTML_PATHS = [
     "index.html",
     "sharks/index.html",
@@ -15,8 +15,16 @@
     "pokemon/index.html",
     "dino-count/index.html",
     "color-buttons/index.html",
+    "dino-tap/index.html",
   ];
-  var SCRIPT_NAMES = ["sharks/game.js", "marine/game.js", "stories/game.js", "pokemon/game.js"];
+  var SCRIPT_NAMES = [
+    "sharks/game.js",
+    "marine/game.js",
+    "stories/game.js",
+    "pokemon/game.js",
+    "dino-tap/main.js",
+    "dino-tap/styles.css",
+  ];
   var SHOWDOWN_SPRITES = "https://play.pokemonshowdown.com/sprites";
   var GALLERY_GENS = [1, 2, 3, 4, 5, 6];
   var GALLERY_MAX = 5;
@@ -110,6 +118,15 @@
     var re = /inat:\s*(\d+)/g;
     var match;
     while ((match = re.exec(text))) out.push(match[1]);
+    return out;
+  }
+
+  // Local pictures named in a game file (dino tap dinos and backgrounds).
+  function localArtPaths(text, fromFile) {
+    var out = [];
+    var re = /assets\/[^"'?\r\n]+?\.(?:svg|png|webp|gif|jpe?g)/g;
+    var match;
+    while ((match = re.exec(text))) out.push(resolvePath(fromFile, match[0]));
     return out;
   }
 
@@ -212,6 +229,12 @@
     urls = urls.concat(galleryUrlsFromSource(scripts["pokemon/game.js"] || ""));
     inatIds((scripts["sharks/game.js"] || "") + "\n" + (scripts["marine/game.js"] || "")).forEach(function (id) {
       urls.push(inatApiUrl(id));
+    });
+    localArtPaths(scripts["dino-tap/main.js"] || "", "dino-tap/main.js").forEach(function (path) {
+      urls.push(path);
+    });
+    localArtPaths(scripts["dino-tap/styles.css"] || "", "dino-tap/styles.css").forEach(function (path) {
+      urls.push(path);
     });
     return dedupe(urls);
   }
