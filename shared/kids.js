@@ -285,6 +285,14 @@
       document.body.classList.toggle("kids-fullscreen", on);
       document.body.classList.toggle("kids-immersive", fallback);
     }
+    if (on) {
+      try {
+        window.scrollTo(0, 0);
+        if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+      } catch (e) {
+        /* ignore */
+      }
+    }
     fullscreenListeners.forEach(function (fn) {
       try {
         fn(on);
