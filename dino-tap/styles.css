@@ -1,0 +1,397 @@
+:root{
+  --bg:#f2fff2;
+  --fg:#063a1e;
+  --accent:#34c759;
+  --accent2:#40c4ff;
+  --btn:#1e6f4a;
+  --btn-text:#fff;
+}
+
+/* Background Environment Classes */
+.bg-plain { background-image: url('assets/backgrounds/bg-plain.svg'); background-size: cover; background-position: center; }
+.bg-desert { background-image: url('assets/backgrounds/bg-desert.svg'); background-size: cover; background-position: center; }
+.bg-mountain { background-image: url('assets/backgrounds/bg-mountain.svg'); background-size: cover; background-position: center; }
+.bg-forest { background-image: url('assets/backgrounds/bg-forest.svg'); background-size: cover; background-position: center; }
+.bg-green-plain { background-image: url('assets/backgrounds/bg-green-plain.svg'); background-size: cover; background-position: center; }
+.bg-oceanside { background-image: url('assets/backgrounds/bg-oceanside.svg'); background-size: cover; background-position: center; }
+.bg-snow { background-image: url('assets/backgrounds/bg-snow.svg'); background-size: cover; background-position: center; }
+.bg-sunset { background-image: url('assets/backgrounds/bg-sunset.svg'); background-size: cover; background-position: center; }
+.bg-volcano { background-image: url('assets/backgrounds/bg-volcano.svg'); background-size: cover; background-position: center; }
+.bg-forest-night { background-image: url('assets/backgrounds/bg-forest-night.svg'); background-size: cover; background-position: center; }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:linear-gradient(180deg, #e9ffe9, #ccffdd);
+  color:var(--fg);
+  -webkit-tap-highlight-color: transparent;
+  display:flex; flex-direction:column;
+}
+.kids-topbar{width:min(100%, 960px); margin:12px auto 0; padding:0 12px; flex:none}
+#app{flex:1; min-height:0; display:grid; place-items:center; overflow:auto}
+.screen{display:none; width:100%; max-width:960px; padding:clamp(12px, 3vw, 24px);}
+.screen.is-visible{display:block}
+.title{font-size: clamp(40px, 8vw, 64px); text-align:center; margin:32px 0 24px}
+.btn{
+  appearance:none; border:none; border-radius:20px; padding:22px 28px; font-size:28px; font-weight:700;
+  background:var(--btn); color:var(--btn-text); width:100%; max-width:420px; display:block; margin:16px auto;
+  box-shadow:0 8px 0 #0c3a25; cursor:pointer; touch-action:manipulation;
+}
+.btn:active{transform:translateY(2px); box-shadow:0 6px 0 #0c3a25}
+.btn.primary{background:linear-gradient(180deg, var(--accent2), var(--accent));}
+.toolbar{
+  display:flex; align-items:center; justify-content:space-between; 
+  gap:8px; margin-bottom:12px; flex-wrap:wrap;
+}
+.score{font-size:clamp(20px, 5vw, 28px); font-weight:800}
+.size-controls{display:flex; align-items:center; gap:6px}
+.size-btn, .sound-btn, .background-btn{
+  min-width:40px; height:40px; padding:8px; font-size:18px; font-weight:bold; 
+  appearance:none; border:none; border-radius:8px; 
+  background:var(--btn); color:var(--btn-text); cursor:pointer;
+  box-shadow:0 2px 0 #0c3a25; display:flex; align-items:center; justify-content:center;
+}
+.size-btn:active, .sound-btn:active, .background-btn:active{transform:translateY(1px); box-shadow:0 1px 0 #0c3a25}
+.size-display{font-size:14px; font-weight:600; min-width:35px; text-align:center; color:#666}
+.sound-controls{display:flex; align-items:center; gap:6px}
+.effect-controls{display:flex; align-items:center; gap:4px}
+.effect-label{font-size:12px; font-weight:600; color:#666}
+.effect-selector{padding:6px 8px; border:1px solid #ccc; border-radius:6px; font-size:12px; background:white; height:40px; min-width:80px}
+
+.background-controls{display:flex; align-items:center; gap:6px}
+
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .toolbar{
+    gap:6px; margin-bottom:8px;
+  }
+  .score{
+    order:1; flex:1; text-align:right;
+  }
+  .size-controls{
+    order:2; gap:4px;
+  }
+  .sound-controls{
+    order:3; gap:4px;
+  }
+  .effect-controls{
+    order:4; gap:3px;
+  }
+  .effect-label{
+    display:none; /* Hide label on mobile */
+  }
+  .background-controls{
+    order:5; gap:4px;
+  }
+  .size-btn, .sound-btn, .background-btn{
+    min-width:36px; height:36px; padding:6px; font-size:16px; 
+    appearance:none; border:none; border-radius:6px; 
+    background:var(--btn); color:var(--btn-text);
+    box-shadow:0 1px 0 #0c3a25; display:flex; align-items:center; justify-content:center;
+  }
+  .size-display{
+    font-size:12px; min-width:30px;
+  }
+  .effect-selector{
+    padding:4px 6px; font-size:11px; height:36px; min-width:70px;
+  }
+  .btn{
+    padding:8px 12px; font-size:14px;
+  }
+}
+.play-area{
+  position:relative; height:72vh; min-height:480px; border-radius:24px;
+  overflow:hidden; display:grid; place-items:center; user-select:none;
+  transition: background 0.5s ease-in-out;
+}
+.hint{position:absolute; top:12px; left:12px; font-size:20px; opacity:.75}
+.dino{font-size:120px; filter: drop-shadow(0 6px 0 rgba(0,0,0,.12)); transform: translateZ(0);}
+
+@media (hover:hover){
+  .dino:hover{transform:scale(1.04)}
+}
+
+@keyframes pop {
+  0% { transform: scale(.8); opacity: .0 }
+  100% { transform: scale(1); opacity: 1 }
+}
+.pop{animation: pop 180ms ease-out}
+
+/* Spawned dinos */
+.dino-spawn{
+  position:absolute;
+  font-size: clamp(64px, 14vw, 120px);
+  line-height:1; will-change: transform, opacity;
+  transform: translate(-50%, -50%) scale(0.85);
+  transition: transform 160ms ease-out, opacity 200ms ease-out;
+  opacity: 0;
+  z-index: 1;
+  text-shadow: 0 3px 0 rgba(0,0,0,.18), 0 0 6px rgba(0,0,0,.20);
+}
+.dino-spawn.show{ transform: translate(-50%, -50%) scale(1); opacity:1 }
+.dino-spawn.hide{ opacity:0.0; transform: translate(-50%, -60%) scale(0.9) }
+
+/* Friendly tap feedback */
+.dino-spawn:active{ transform: translate(-50%, -50%) scale(0.96) }
+
+/* Always-visible center dino during gameplay */
+.dino-center{
+  position:absolute; left:50%; top:56%; transform: translate(-50%, -50%);
+  z-index: 0; user-select:none; opacity:.95;
+}
+
+/* Visual dino bubble (emoji-independent) */
+.dino-bubble{
+  width: clamp(84px, 18vw, 140px);
+  height: clamp(84px, 18vw, 140px);
+  border-radius: 50%;
+  background: radial-gradient(120% 120% at 30% 30%, #6ee7b7 0%, #34c759 60%, #1b8f56 100%);
+  box-shadow: 0 10px 0 rgba(0,0,0,.12);
+  position: relative;
+}
+.dino-bubble::before, .dino-bubble::after{
+  content:""; position:absolute; top:32%; width:14%; height:14%;
+  background: #fff; border-radius: 50%; box-shadow: 0 1px 0 rgba(0,0,0,.2) inset;
+}
+.dino-bubble::before{ left:34% }
+.dino-bubble::after{ right:34% }
+.dino-bubble span.eye{ position:absolute; top:36%; width:6%; height:6%; background:#0b301a; border-radius:50% }
+.dino-bubble span.eye.left{ left:38% }
+.dino-bubble span.eye.right{ right:38% }
+
+/* Spawned size variant */
+.dino-spawn .dino-bubble{ width: clamp(72px, 12vw, 128px); height: clamp(72px, 12vw, 128px); }
+
+/* Static dinos - guaranteed visible */
+.dino-static{
+  position: absolute;
+  /* Base size - will be scaled dynamically via JavaScript */
+  width: 80px;
+  height: auto; /* maintain aspect ratio */
+  cursor: pointer;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 300ms ease-out, transform 200ms ease-out;
+  filter: drop-shadow(0 4px 0 rgba(0,0,0,.2));
+  object-fit: contain;
+  touch-action: manipulation;
+  will-change: transform, opacity;
+}
+.dino-static.visible{
+  opacity: 1;
+}
+.dino-static:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.dino-static:active{
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Celebration animations */
+.celebration-ring {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #34c759;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  animation: celebration-ring-expand 0.8s ease-out forwards;
+}
+
+@keyframes celebration-ring-expand {
+  0% { width: 20px; height: 20px; opacity: 1; border-width: 3px; }
+  100% { width: 120px; height: 120px; opacity: 0; border-width: 1px; }
+}
+
+.celebration-sparkle {
+  position: fixed;
+  width: var(--sparkle-size, 12px);
+  height: var(--sparkle-size, 12px);
+  background: var(--sparkle-color, radial-gradient(circle, #ffd700 0%, #ff6b35 100%));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  animation: celebration-sparkle-drift var(--duration, 1.2s) ease-out forwards;
+  box-shadow: 0 0 6px var(--glow-color, #ffd700);
+}
+
+.celebration-sparkle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--sparkle-color, #ffd700), transparent);
+  transform: translate(-50%, -50%) rotate(var(--rotation, 0deg));
+}
+
+.celebration-sparkle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 200%;
+  background: linear-gradient(0deg, transparent, var(--sparkle-color, #ffd700), transparent);
+  transform: translate(-50%, -50%) rotate(var(--rotation, 0deg));
+}
+
+@keyframes celebration-sparkle-drift {
+  0% { 
+    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    opacity: 1;
+  }
+  20% { 
+    transform: translate(-50%, -50%) scale(1.2) rotate(90deg);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(-50%, -50%) translate(var(--drift-x, 40px), var(--drift-y, -60px)) scale(0.2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes celebration-pop {
+  0% { 
+    transform: translate(-50%, -50%) scale(var(--current-scale, 1)); 
+    filter: brightness(1);
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(calc(var(--current-scale, 1) * 1.3)); 
+    filter: brightness(1.5);
+  }
+  100% { 
+    transform: translate(-50%, -50%) scale(var(--current-scale, 1)); 
+    filter: brightness(1);
+  }
+}
+
+/* Fireworks effect */
+.celebration-firework {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.firework-trail {
+  background: linear-gradient(45deg, #ff6b35, #f7931e);
+  animation: firework-launch 0.8s ease-out forwards;
+}
+
+.firework-burst {
+  background: radial-gradient(circle, #ffd700, #ff6b35);
+  animation: firework-explode 1.2s ease-out forwards;
+}
+
+@keyframes firework-launch {
+  0% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(-50%, -50%) translateY(-80px) scale(0.5);
+    opacity: 0.8;
+  }
+}
+
+@keyframes firework-explode {
+  0% { 
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  20% { 
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+/* New celebration effects */
+.celebration-heart {
+  position: fixed;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  animation: celebration-heart-float 2s ease-out forwards;
+}
+
+@keyframes celebration-heart-float {
+  0% { 
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(-50%, -50%) translate(var(--drift-x, 0px), var(--drift-y, -50px)) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.celebration-lightning {
+  position:fixed; pointer-events:none; z-index:1000;
+  transform:translate(-50%, -50%);
+}
+
+.lightning-segment{
+  opacity:0;
+  position:absolute;
+}
+
+@keyframes lightning-flash{
+  0%{opacity:0; filter:brightness(1)}
+  10%{opacity:1; filter:brightness(3)}
+  20%{opacity:0.8; filter:brightness(2)}
+  30%{opacity:1; filter:brightness(4)}
+  50%{opacity:0.6; filter:brightness(1.5)}
+  70%{opacity:1; filter:brightness(3)}
+  100%{opacity:0; filter:brightness(1)}
+}
+
+@keyframes lightning-screen-flash{
+  0%{opacity:0}
+  50%{opacity:1}
+  100%{opacity:0}
+}
+
+.celebration-bubble {
+  position: fixed;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.8), rgba(173,216,230,0.6));
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+  animation: celebration-bubble-float 2.5s ease-out forwards;
+}
+
+@keyframes celebration-bubble-float {
+  0% { 
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.8;
+  }
+  20% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% { 
+    transform: translate(-50%, -50%) translate(var(--drift-x, 0px), var(--drift-y, -60px)) scale(1.2);
+    opacity: 0;
+  }
+}

@@ -11,6 +11,7 @@
     { href: "pokemon/", name: "PokéCatch", say: "Poh-kay Catch", emoji: "👾", tile: "#3b2f6b" },
     { href: "color-buttons/", name: "Color buttons", emoji: "🎨", tile: "#5a2f4a" },
     { href: "dino-count/", name: "Dino count", emoji: "🦕", tile: "#2f5a37" },
+    { href: "dino-tap/", name: "Dino tap", emoji: "🦖", tile: "#1e6f4a" },
   ];
 
   function earSvg() {
