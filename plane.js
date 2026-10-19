@@ -3,7 +3,7 @@
 (function (exports) {
   "use strict";
 
-  var PLANE_CACHE = "zander-plane-v4";
+  var PLANE_CACHE = "zander-plane-v5";
   var SAVED_KEY = "zander-plane-saved";
   var AUTOSTART_KEY = "zander-plane-autostart";
   var GAMES = ["sharks/", "marine/", "stories/", "pokemon/", "dino-count/", "color-buttons/", "dino-tap/"];

@@ -1,16 +1,24 @@
-/* Shared kid-friendly UI: big tap targets, Home / Mute / read-aloud buttons. */
+/* Shared kid-friendly UI: big tap targets, Home / Mute / Full screen / read-aloud. */
 /* Uses each game's CSS variables where present, with safe fallbacks. */
+
+html,
+body {
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+}
 
 .kids-topbar {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: min(100%, 640px);
+  width: min(100%, 720px);
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .kids-topbar-spacer {
   flex: 1;
+  min-width: 8px;
 }
 
 .kids-btn {
@@ -63,6 +71,55 @@
 .kids-mute.is-off {
   background: rgba(255, 255, 255, 0.14);
   color: var(--muted, #9aa3b2);
+}
+
+/* Full screen toggle — fills the tablet and hides browser chrome when the API allows */
+.kids-fullscreen-btn {
+  background: #2a6fdb;
+  color: #fff;
+}
+
+.kids-fullscreen-btn.is-on {
+  background: #f0b429;
+  color: #1a1200;
+}
+
+/* While full screen, keep taps from bouncing the page */
+html.kids-fullscreen,
+html.kids-fullscreen body {
+  overscroll-behavior: none;
+}
+
+/* Immersive fill when the Fullscreen API is missing (common on iOS Safari) */
+html.kids-immersive,
+html.kids-immersive body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+html.kids-immersive body {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding:
+    env(safe-area-inset-top, 0)
+    env(safe-area-inset-right, 0)
+    env(safe-area-inset-bottom, 0)
+    env(safe-area-inset-left, 0);
+  box-sizing: border-box;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.kids-fullscreen .kids-topbar {
+  width: min(100%, 960px);
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 /* The wave arcs only make sense when sound is on; the slash only when off. */
