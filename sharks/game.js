@@ -1556,7 +1556,13 @@ const HOW_TO_TEXT = "Tap a shark to spot it. Tap a shark in your logbook to open
 function initReadToMe() {
   if (!window.Kids) return;
   const bar = document.getElementById("kids-topbar");
-  if (bar) bar.appendChild(window.Kids.homeButton("../"));
+  if (bar) {
+    bar.appendChild(window.Kids.homeButton("../"));
+    const spacer = document.createElement("span");
+    spacer.className = "kids-topbar-spacer";
+    bar.appendChild(spacer);
+    bar.appendChild(window.Kids.fullscreenButton());
+  }
 
   const label = document.getElementById("how-to");
   if (label) {

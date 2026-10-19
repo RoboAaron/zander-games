@@ -1,6 +1,6 @@
 # Zander games
 
-Small, kid-friendly browser games (ages 4–5). Every game reads its instructions out loud, saves progress, has one shared **Sound on/off** button, and a **Games** button to hop back to the menu.
+Small, kid-friendly browser games (ages 4–5). Every game reads its instructions out loud, saves progress, has one shared **Sound on/off** button, a **Full screen** button that fills the tablet, and a **Games** button to hop back to the menu. Pinch-zoom is blocked so little fingers stay on the game.
 
 **▶️ Play online (menu):** https://roboaaron.github.io/zander-games/
 
@@ -20,6 +20,7 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 - **Read-to-me everywhere:** a one-line "how to play" is spoken after the first tap, and every game has a speaker button to hear it again.
 - **Saved progress:** the shark and sea life logbooks and caught Pokémon persist; Color buttons and Dino count keep a running star count.
 - **One sound switch:** muting in any game (key `zander-sound`) mutes them all.
+- **Full screen + no zoom:** tap **Full screen** on the menu or any game to fill the tablet (hides browser chrome when the tablet allows it). Pinch and double-tap zoom are blocked so the page does not get stuck zoomed in.
 - **Plane:** on the menu, tap **Save for the plane** while online. The games, pictures, and cries are stored on the tablet and still open with wifi off. Tap it again before a trip to refresh the pack.
 - **Healthy by design:** no timers, no ads, no sign-up, no urgency; big tap targets and reduced-motion support.
 

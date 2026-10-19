@@ -3,7 +3,8 @@
 // - one shared mute state (localStorage key "zander-sound") across the hub + every game
 // - speak() gated by that mute state
 // - tiny localStorage JSON wrappers
-// - reusable Home / Mute / "read this out loud" buttons
+// - reusable Home / Mute / Full screen / "read this out loud" buttons
+// - pinch-zoom blocked so little fingers stay on the game, not the browser chrome
 (function () {
   "use strict";
 
@@ -19,6 +20,16 @@
   var HOME_SVG =
     '<svg class="kids-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">' +
     '<path fill="currentColor" d="M12 3l9 8h-3v9h-4v-6H10v6H6v-9H3l9-8z"/>' +
+    "</svg>";
+
+  var EXPAND_SVG =
+    '<svg class="kids-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">' +
+    '<path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/>' +
+    "</svg>";
+
+  var SHRINK_SVG =
+    '<svg class="kids-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">' +
+    '<path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M3 8h5V3M16 3v5h5M3 16h5v5M16 21v-5h5"/>' +
     "</svg>";
 
   var KidStore = {
@@ -245,6 +256,193 @@
     return a;
   }
 
+  // --- Full screen (API when the browser has it; CSS fill on iOS / older tablets) ---
+
+  var fullscreenListeners = [];
+  var immersiveFallback = false;
+
+  function apiFullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+
+  function canUseFullscreenApi() {
+    var el = document.documentElement;
+    return !!(el.requestFullscreen || el.webkitRequestFullscreen);
+  }
+
+  function isFullscreen() {
+    return !!apiFullscreenElement() || immersiveFallback;
+  }
+
+  function syncFullscreenClass() {
+    var on = isFullscreen();
+    var fallback = immersiveFallback && !apiFullscreenElement();
+    if (document.documentElement) {
+      document.documentElement.classList.toggle("kids-fullscreen", on);
+      document.documentElement.classList.toggle("kids-immersive", fallback);
+    }
+    if (document.body) {
+      document.body.classList.toggle("kids-fullscreen", on);
+      document.body.classList.toggle("kids-immersive", fallback);
+    }
+    fullscreenListeners.forEach(function (fn) {
+      try {
+        fn(on);
+      } catch (e) {
+        /* ignore listener errors */
+      }
+    });
+  }
+
+  function enterFullscreen() {
+    immersiveFallback = false;
+    var el = document.documentElement;
+    var req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (req) {
+      try {
+        var result = req.call(el);
+        if (result && typeof result.then === "function") {
+          return result.catch(function () {
+            immersiveFallback = true;
+            syncFullscreenClass();
+          });
+        }
+        return Promise.resolve();
+      } catch (e) {
+        immersiveFallback = true;
+        syncFullscreenClass();
+        return Promise.resolve();
+      }
+    }
+    immersiveFallback = true;
+    syncFullscreenClass();
+    return Promise.resolve();
+  }
+
+  function exitFullscreen() {
+    var apiEl = apiFullscreenElement();
+    if (apiEl) {
+      var exit = document.exitFullscreen || document.webkitExitFullscreen;
+      if (exit) {
+        try {
+          var result = exit.call(document);
+          if (result && typeof result.then === "function") {
+            return result.catch(function () {
+              /* ignore */
+            });
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      }
+    }
+    immersiveFallback = false;
+    syncFullscreenClass();
+    return Promise.resolve();
+  }
+
+  function toggleFullscreen() {
+    if (isFullscreen()) return exitFullscreen();
+    return enterFullscreen();
+  }
+
+  function onFullscreenChange(fn) {
+    fullscreenListeners.push(fn);
+  }
+
+  function fullscreenButton() {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "kids-btn kids-fullscreen-btn";
+    function render() {
+      var on = isFullscreen();
+      btn.classList.toggle("is-on", on);
+      btn.setAttribute("aria-pressed", String(on));
+      btn.setAttribute(
+        "aria-label",
+        on ? "Exit full screen. Tap to show the browser again." : "Full screen. Tap to fill the tablet."
+      );
+      btn.innerHTML =
+        (on ? SHRINK_SVG : EXPAND_SVG) +
+        '<span class="kids-btn-label">' +
+        (on ? "Exit" : "Full screen") +
+        "</span>";
+    }
+    btn.addEventListener("click", function () {
+      var wasOn = isFullscreen();
+      toggleFullscreen();
+      // Speak after the toggle settles; chrome may reject the API without a gesture.
+      setTimeout(function () {
+        render();
+        KidSound.speak(isFullscreen() ? "Full screen" : wasOn ? "Done" : "Full screen");
+      }, 80);
+    });
+    onFullscreenChange(render);
+    render();
+    return btn;
+  }
+
+  if (typeof document !== "undefined") {
+    document.addEventListener("fullscreenchange", syncFullscreenClass);
+    document.addEventListener("webkitfullscreenchange", syncFullscreenClass);
+  }
+
+  // --- Zoom lock: stop pinch / ctrl-wheel zoom so taps stay on the game ---
+
+  function lockZoom() {
+    if (typeof document === "undefined") return;
+
+    function blockMultiTouch(e) {
+      if (e.touches && e.touches.length > 1) e.preventDefault();
+    }
+
+    document.addEventListener("touchmove", blockMultiTouch, { passive: false, capture: true });
+    document.addEventListener(
+      "gesturestart",
+      function (e) {
+        e.preventDefault();
+      },
+      { passive: false, capture: true }
+    );
+    document.addEventListener(
+      "gesturechange",
+      function (e) {
+        e.preventDefault();
+      },
+      { passive: false, capture: true }
+    );
+    document.addEventListener(
+      "wheel",
+      function (e) {
+        if (e.ctrlKey) e.preventDefault();
+      },
+      { passive: false, capture: true }
+    );
+
+    // Keep a zoomed-in viewport from sticking after a prior visit.
+    try {
+      if (document.documentElement) {
+        document.documentElement.style.touchAction = "manipulation";
+      }
+      if (document.body) {
+        document.body.style.touchAction = "manipulation";
+      } else {
+        document.addEventListener(
+          "DOMContentLoaded",
+          function () {
+            if (document.body) document.body.style.touchAction = "manipulation";
+            syncFullscreenClass();
+          },
+          { once: true }
+        );
+      }
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  lockZoom();
+
   // A big round speaker that reads the given text (string or a function returning one) out loud.
   function hearButton(text, opts) {
     opts = opts || {};
@@ -284,7 +482,7 @@
     document.addEventListener("keydown", go, true);
   }
 
-  // Convenience: build a top bar with Home (left) + Mute (right) and prepend it to a container.
+  // Convenience: Home (left) + Full screen + Mute (right).
   function topBar(opts) {
     opts = opts || {};
     var bar = document.createElement("div");
@@ -293,6 +491,7 @@
     var spacer = document.createElement("span");
     spacer.className = "kids-topbar-spacer";
     bar.appendChild(spacer);
+    if (opts.fullscreen !== false) bar.appendChild(fullscreenButton());
     if (opts.mute !== false) bar.appendChild(muteButton());
     return bar;
   }
@@ -303,8 +502,15 @@
     sound: KidSound,
     muteButton: muteButton,
     homeButton: homeButton,
+    fullscreenButton: fullscreenButton,
     hearButton: hearButton,
     speakInstructionOnce: speakInstructionOnce,
     topBar: topBar,
+    isFullscreen: isFullscreen,
+    enterFullscreen: enterFullscreen,
+    exitFullscreen: exitFullscreen,
+    toggleFullscreen: toggleFullscreen,
+    onFullscreenChange: onFullscreenChange,
+    canUseFullscreenApi: canUseFullscreenApi,
   };
 })();

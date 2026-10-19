@@ -958,6 +958,7 @@
     const spacer = document.createElement('span');
     spacer.className = 'kids-topbar-spacer';
     bar.appendChild(spacer);
+    bar.appendChild(window.Kids.fullscreenButton());
     bar.appendChild(window.Kids.muteButton());
     window.Kids.sound.onChange(applySoundUi);
   }
