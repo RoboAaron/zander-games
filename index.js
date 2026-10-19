@@ -7,6 +7,8 @@
   var GAMES = [
     { href: "sharks/", name: "Shark spotter", emoji: "🦈", tile: "#0c3c5a" },
     { href: "stories/", name: "Story spotter", emoji: "📖", tile: "#4a2f6e" },
+    { href: "gospel-path/", name: "Gospel path", emoji: "✝️", tile: "#5a2a4a" },
+    { href: "promise-bridge/", name: "Promise bridge", emoji: "🌉", tile: "#2f3f6b" },
     { href: "marine/", name: "Sea life spotter", emoji: "🌊", tile: "#0a4a5c" },
     { href: "pokemon/", name: "PokéCatch", say: "Poh-kay Catch", emoji: "👾", tile: "#3b2f6b" },
     { href: "color-buttons/", name: "Color buttons", emoji: "🎨", tile: "#5a2f4a" },

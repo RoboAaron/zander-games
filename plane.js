@@ -3,15 +3,27 @@
 (function (exports) {
   "use strict";
 
-  var PLANE_CACHE = "zander-plane-v6";
+  var PLANE_CACHE = "zander-plane-v7";
   var SAVED_KEY = "zander-plane-saved";
   var AUTOSTART_KEY = "zander-plane-autostart";
-  var GAMES = ["sharks/", "marine/", "stories/", "pokemon/", "dino-count/", "color-buttons/", "dino-tap/"];
+  var GAMES = [
+    "sharks/",
+    "marine/",
+    "stories/",
+    "gospel-path/",
+    "promise-bridge/",
+    "pokemon/",
+    "dino-count/",
+    "color-buttons/",
+    "dino-tap/",
+  ];
   var HTML_PATHS = [
     "index.html",
     "sharks/index.html",
     "marine/index.html",
     "stories/index.html",
+    "gospel-path/index.html",
+    "promise-bridge/index.html",
     "pokemon/index.html",
     "dino-count/index.html",
     "color-buttons/index.html",
@@ -21,6 +33,8 @@
     "sharks/game.js",
     "marine/game.js",
     "stories/game.js",
+    "gospel-path/game.js",
+    "promise-bridge/game.js",
     "pokemon/game.js",
     "dino-tap/main.js",
     "dino-tap/styles.css",
@@ -217,7 +231,13 @@
     slugsFromSource(scripts["marine/game.js"] || "").forEach(function (slug) {
       urls.push("marine/art/" + slug + ".webp");
     });
-    storyArtIds(scripts["stories/game.js"] || "").forEach(function (id) {
+    storyArtIds(
+      (scripts["stories/game.js"] || "") +
+        "\n" +
+        (scripts["gospel-path/game.js"] || "") +
+        "\n" +
+        (scripts["promise-bridge/game.js"] || "")
+    ).forEach(function (id) {
       urls.push("stories/art/" + id + ".svg");
     });
     energySymbols(scripts["pokemon/game.js"] || "").forEach(function (symbol) {

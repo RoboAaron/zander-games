@@ -9,6 +9,9 @@ Or open `index.html` locally, or serve the folder (`python3 -m http.server`) and
 ## Games
 
 - **[🦈 Shark spotter](sharks/)** — tap real shark species to spot them; open an info card with facts and real photos for each one in your logbook.
+- **[📖 Story spotter](stories/)** — tap Bible story pictures into sets; hear the preschool lines and keep a book of what you found.
+- **[✝️ Gospel path](gospel-path/)** — tap the next picture in the gospel story (creation through trust Jesus); wrong taps are gentle “not yet.”
+- **[🌉 Promise bridge](promise-bridge/)** — match an Old Testament promise picture to the Jesus picture that keeps it.
 - **[🌊 Sea life spotter](marine/)** — tap real marine creatures (eels, shrimp, crabs, lobsters, and more) to spot them; open an info card with facts and real photos for each one in your logbook.
 - **[👾 PokéCatch](pokemon/)** — tap Pokémon to catch them; open a card to hear a fact and see pictures. Your collection is saved.
 - **[🎨 Color buttons](color-buttons/)** — match the big color square; earns stars as you go.
