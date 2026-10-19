@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Gospel path</title>
+    <link rel="stylesheet" href="../shared/kids.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <main class="game" aria-label="Gospel path">
+      <div class="kids-topbar" id="kids-topbar"></div>
+      <header class="top">
+        <p class="label" id="how-to">
+          <span class="how-to-text">Tap the next picture in the gospel story.</span>
+        </p>
+        <p class="cheer" id="cheer" aria-live="polite">The gospel story</p>
+        <p class="spoken" id="spoken" aria-live="polite"></p>
+      </header>
+
+      <ol class="path" id="path" aria-label="Gospel path steps"></ol>
+
+      <div class="field" id="field" role="group" aria-label="Pick the next story"></div>
+
+      <section class="trail" aria-labelledby="trail-heading">
+        <div class="trail-head">
+          <h2 id="trail-heading">Your path</h2>
+          <button class="hear-story" id="hear-story" type="button" hidden>Hear the story</button>
+          <button class="reset-btn" id="reset-btn" type="button">Start over</button>
+        </div>
+        <p class="progress" id="progress" aria-live="polite">Step 1 of 8</p>
+      </section>
+    </main>
+    <script src="../shared/kids.js?v=4"></script>
+    <script src="game.js?v=1"></script>
+  </body>
+</html>
